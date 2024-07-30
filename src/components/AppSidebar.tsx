@@ -1,20 +1,13 @@
 import React from 'react'
-import Link from 'next/link'
 import { useDispatch } from 'react-redux'
 import { useTypedSelector } from './../store'
 import {
   CCloseButton,
   CSidebar,
-  CSidebarBrand,
   CSidebarHeader,
-  CSidebarToggler,
 } from '@coreui/react-pro'
-import CIcon from '@coreui/icons-react'
 
 import AppSidebarNav from './AppSidebarNav'
-
-import { logo } from '@/public/brand/logo'
-import { sygnet } from '@/public/brand/sygnet'
 
 // sidebar nav config
 import navigation from '../_nav'
@@ -35,17 +28,10 @@ const AppSidebar = (): JSX.Element => {
       }}
     >
       <CSidebarHeader className="bg-primary border-bottom">
-        <CSidebarBrand as={Link} href="/">
-          <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
-          <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
-        </CSidebarBrand>
         <CCloseButton
-          className="d-lg-none"
+          className="m-0"
           dark
           onClick={() => dispatch({ type: 'set', sidebarShow: false })}
-        />
-        <CSidebarToggler
-          onClick={() => dispatch({ type: 'set', sidebarUnfoldable: !unfoldable })}
         />
       </CSidebarHeader>
       <AppSidebarNav items={navigation} />

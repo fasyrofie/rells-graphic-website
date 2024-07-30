@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
+import Link from 'next/link'
 import classNames from 'classnames'
 
 import {
   CContainer,
   CForm,
-  CFormInput,
   CDropdown,
   CDropdownItem,
   CDropdownMenu,
@@ -13,16 +13,15 @@ import {
   CHeader,
   CHeaderNav,
   CHeaderToggler,
-  CInputGroup,
-  CInputGroupText,
   useColorModes,
+  CSidebarBrand,
+  CButton,
 } from '@coreui/react-pro'
 import {
   cilContrast,
   cilApplicationsSettings,
   cilMenu,
   cilMoon,
-  cilSearch,
   cilSun,
 } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
@@ -31,10 +30,10 @@ import { useTypedSelector } from './../store'
 
 import {
   AppHeaderDropdown,
-  AppHeaderDropdownMssg,
-  AppHeaderDropdownNotif,
-  AppHeaderDropdownTasks,
 } from './header/'
+
+import { logo } from '@/public/brand/logo'
+import { sygnet } from '@/public/brand/sygnet'
 
 const AppHeader = (): JSX.Element => {
   const headerRef = useRef<HTMLDivElement>(null)
@@ -52,36 +51,28 @@ const AppHeader = (): JSX.Element => {
   }, [])
 
   return (
-    <CHeader position="sticky" className="bg-primary mb-4 p-0" ref={headerRef}>
+    <CHeader position="sticky" className="bg-dark mb-4 p-0" ref={headerRef}>
       <CContainer className="px-4" fluid>
         <CHeaderToggler
-          className={classNames('d-lg-none', {
-            'prevent-hide': !sidebarShow,
-          })}
+          className={classNames('d-lg-none')}
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
           style={{ marginInlineStart: '-14px' }}
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <CForm className="d-none d-sm-flex">
-          <CInputGroup className="border border-light border-opacity-25 rounded">
-            <CInputGroupText id="search-addon" className="bg-transparent border-0 px-1">
-              <CIcon icon={cilSearch} size="lg" className="my-1 mx-2 text-white text-opacity-25" />
-            </CInputGroupText>
-            <CFormInput
-              placeholder="Search"
-              aria-label="Search"
-              aria-describedby="search-addon"
-              className="bg-transparent border-0"
-            />
-          </CInputGroup>
+        <CSidebarBrand as={Link} href="/">
+          <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
+          <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
+        </CSidebarBrand>
+        <CForm className="ms-4 me-auto d-none d-md-flex">
+          <CButton color="nav" shape="rounded-pill">About Me</CButton>
+          <CButton color="nav" shape="rounded-pill">Video Editing</CButton>
+          <CButton color="nav" shape="rounded-pill">Thumbnail Design</CButton>
+          <CButton color="nav" shape="rounded-pill">Socmed Design</CButton>
+          <CButton color="nav" shape="rounded-pill">Yearbook Design</CButton>
+          <CButton color="nav" shape="rounded-pill">Illustration</CButton>
         </CForm>
-        <CHeaderNav className="d-none d-md-flex ms-auto">
-          <AppHeaderDropdownNotif />
-          <AppHeaderDropdownTasks />
-          <AppHeaderDropdownMssg />
-        </CHeaderNav>
-        <CHeaderNav className="ms-auto ms-md-0">
+        <CHeaderNav className="ms-auto ms-md-0 d-none d-md-flex">
           <li className="nav-item py-1">
             <div className="vr h-100 mx-2 text-white text-opacity-50"></div>
           </li>
@@ -130,12 +121,6 @@ const AppHeader = (): JSX.Element => {
           </li>
           <AppHeaderDropdown />
         </CHeaderNav>
-        <CHeaderToggler
-          onClick={() => dispatch({ type: 'set', asideShow: !asideShow })}
-          style={{ marginInlineEnd: '-12px' }}
-        >
-          <CIcon icon={cilApplicationsSettings} size="lg" />
-        </CHeaderToggler>
       </CContainer>
     </CHeader>
   )

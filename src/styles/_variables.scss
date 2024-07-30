@@ -4,11 +4,16 @@
 
 $enable-deprecation-messages: false !default;
 
-$primary:   #5046e5 !default;
-$success:   #51cc8a !default;
-$danger:    #ef376e !default;
-$warning:   #fc0 !default;
-$info:      #747af2 !default;
+// scss-docs-start theme-color-variables
+$primary:       #5856d6 !default;
+$secondary:     #6b7785 !default;
+$success:       #1b9e3e !default;
+$info:          #39f !default;
+$warning:       #f9b115 !default;
+$danger:        #e55353 !default;
+// $light:         $gray-100 !default;
+$dark:          #131313 !default;
+// scss-docs-end theme-color-variables
 
 $primary-text-emphasis:   shade-color($primary, 60%) !default;
 $success-text-emphasis:   shade-color($success, 60%) !default;
