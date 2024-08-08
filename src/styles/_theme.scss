@@ -1,5 +1,5 @@
 body {
-  background-color: var(--cui-tertiary-bg);
+  background-color: #131313;
 }
 
 .wrapper {
@@ -68,11 +68,11 @@ body {
 @if $enable-dark-mode {
   @include color-mode(dark) {
     body {
-      background-color: var(--cui-dark-bg-subtle);
+      background-color: #131313;
     }
 
     .sidebar {
-      background-color: var(--cui-body-bg) !important; // stylelint-disable-line
+      background-color: #131313; // stylelint-disable-line
       background-image: none !important; // stylelint-disable-line
       border: 0;
     }

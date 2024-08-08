@@ -1,7 +1,6 @@
 'use client'
 
-import { AppAside, AppSidebar, AppFooter, AppHeader, AppBreadcrumb } from '@/components'
-import { CContainer } from '@coreui/react-pro'
+import { AppAside, AppSidebar, AppFooter, AppHeader } from '@/components'
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,10 +9,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <div className="wrapper d-flex flex-column min-vh-100">
         <AppHeader />
         <div className="body flex-grow-1">
-          <CContainer lg className="px-4">
-            <AppBreadcrumb />
-            {children}
-          </CContainer>
+          {children}
         </div>
         <AppFooter />
       </div>

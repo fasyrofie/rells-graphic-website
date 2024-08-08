@@ -1,26 +1,19 @@
 'use client'
 
-import Script from 'next/script'
+// import Script from 'next/script'
 
 import { Provider } from 'react-redux'
-import { Inter } from 'next/font/google'
+
+import { inter } from '@/app/fonts'
 import store from './../store'
 import './../styles/style.scss'
-// We use those styles to show code examples, you should remove them in your application.
-import './../styles/examples.scss'
-
-// If loading a variable font, you don't need to specify the font weight
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <head>
-        <title>CoreUI PRO Next.js Admin Template</title>
-        <Script
+        <title>Rell&apos;s Graphic Website</title>
+        {/* <Script
           id="get-color-scheme"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
@@ -31,9 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           document.documentElement.dataset.coreuiTheme = 'dark';
         }`,
           }}
-        />
+        /> */}
       </head>
-      <body className={inter.className}>
+      <body>
         <Provider store={store}>{children}</Provider>
       </body>
     </html>

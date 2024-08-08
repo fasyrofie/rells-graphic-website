@@ -1,6 +1,6 @@
 import AppAside from './AppAside'
 import AppBreadcrumb from './AppBreadcrumb'
-import AppFooter from './AppFooter'
+import AppFooter from './AppFooter.js'
 import AppHeader from './AppHeader'
 import AppSidebar from './AppSidebar'
 import DocsExample from './DocsExample'
