@@ -53,7 +53,7 @@ const AppHeader = (): JSX.Element => {
           <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
           <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
         </CSidebarBrand>
-        <CForm className="ms-4 me-auto d-none d-md-flex">
+        <CForm className="ms-4 me-auto d-none d-lg-flex">
           <CButton color="nav" shape="rounded-pill">About Me</CButton>
           <CButton color="nav" shape="rounded-pill">Video Editing</CButton>
           <CButton color="nav" shape="rounded-pill">Thumbnail Design</CButton>
