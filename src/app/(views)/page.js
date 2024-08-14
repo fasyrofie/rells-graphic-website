@@ -117,7 +117,7 @@ const HomePage = () => {
 
       <div id="dandz-speaks2" className="py-5">
         <div className="ratio ratio-16x9">
-          <video autoPlay className="object-fit-cover" controls={false} loop playsInline muted>
+          <video className="object-fit-cover" controls>
             <source src="/videos/DandZSpeaks-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
