@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <>
       <CContainer lg className="py-5">
-        <div id="about-me" className="row gx-5">
+        <div id="about-me" className="row">
           {/* Left */}
           <div className="col-12 col-md-6 align-self-end py-3">
             <div className="text-white text-nickname">Rell&apos;s Graphic&apos;s real name is</div>
