@@ -1,4 +1,22 @@
 // Here you can add other styles
+body {
+  background-image: linear-gradient(to bottom, transparent 98%, $secondary 2%),
+    linear-gradient(to right, $dark 98%, $secondary 2%);
+  background-size:
+    2rem 2rem,
+    2rem 2rem;
+}
+
+.content-h-full {
+  height: calc(100vh - (4rem));
+}
+.content-min-h-full {
+  min-height: calc(100vh - (4rem));
+}
+.content-max-h-full {
+  max-height: calc(100vh - (4rem));
+}
+
 .btn-nav {
   border-color: #474747;
   color: #ffffff;
@@ -14,7 +32,7 @@
 }
 
 #about-me {
-  min-height: calc(100vh - (4rem + 1.5rem));
+  min-height: calc(100vh - (4rem));
   .text-nickname {
     font-size: 1.5rem;
     font-weight: 600;
@@ -40,6 +58,10 @@
       font-size: 5.625rem;
     }
   }
+}
+
+#thumbnail-design {
+  height: calc(100vh - (4rem));
 }
 
 .footer {

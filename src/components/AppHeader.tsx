@@ -40,7 +40,7 @@ const AppHeader = (): JSX.Element => {
   }, [])
 
   return (
-    <CHeader position="sticky" className="bg-dark mb-4 p-0" ref={headerRef}>
+    <CHeader position="sticky" className="bg-dark p-0" ref={headerRef}>
       <CContainer className="px-4" fluid>
         <CHeaderToggler
           className={classNames('d-lg-none')}

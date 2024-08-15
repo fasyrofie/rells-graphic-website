@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         /> */}
       </head>
-      <body>
+      <body className="text-white">
         <Provider store={store}>{children}</Provider>
       </body>
     </html>
