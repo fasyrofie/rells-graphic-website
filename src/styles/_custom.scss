@@ -17,6 +17,33 @@ body {
   max-height: calc(100vh - (4rem));
 }
 
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .btn-nav {
   border-color: #474747;
   color: #ffffff;
@@ -62,6 +89,26 @@ body {
 
 #thumbnail-design {
   height: calc(100vh - (4rem));
+}
+
+#socmed-design {
+  #hightlight-clients {
+    .client {
+      &:hover {
+        .client-feed {
+          filter: none;
+          transition: filter 200ms linear;
+        }
+        .client-logo {
+          display: none;
+        }
+      }
+      .client-feed {
+        filter: grayscale(100%) brightness(50%) blur(8px);
+        transition: filter 100ms linear;
+      }
+    }
+  }
 }
 
 .footer {
