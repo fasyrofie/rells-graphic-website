@@ -3,6 +3,7 @@
 import classNames from 'classnames'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 import {
   CBadge,
@@ -41,6 +42,14 @@ import socmedBannerImage from '@/assets/images/socmed-banner.png'
 import socmedLeftImage from '@/assets/images/socmed-left.svg'
 import socmedRightImage from '@/assets/images/socmed-right.svg'
 
+// Illustration Images
+import illustrationImage from '@/assets/images/illustration/illustration.png'
+import fundamentasImage from '@/assets/images/illustration/fundamentas.png'
+
+// YJW Images
+import yjwBanner from '@/assets/images/yjw/yjw-banner.jpeg'
+import yjwLogo from '@/assets/images/yjw/yjw-logo.png'
+
 const dnzspeaksVideos = [
   '/videos/DnZSpeaks/April Short 9_Done.mp4',
   '/videos/DnZSpeaks/eminem.mp4',
@@ -72,6 +81,39 @@ const graphicDesigns = [
     name: 'Illustration',
     description:
       'I specialized in illustration in college and have competed in drawing contests organized by brands and gaming companies, though I have not yet held a professional role in this field.',
+  },
+]
+
+const thumbnailDesigns = [
+  {
+    src: '/images/thumbnail-design/gorgi.png',
+    width: 800,
+    height: 800,
+  },
+  {
+    src: '/images/thumbnail-design/Deve Talks.png',
+    width: 600,
+    height: 600,
+  },
+  {
+    src: '/images/thumbnail-design/NicInspo.png',
+    width: 300,
+    height: 300,
+  },
+  {
+    src: '/images/thumbnail-design/Roman Mossey.png',
+    width: 871,
+    height: 871,
+  },
+  {
+    src: '/images/thumbnail-design/Sabri Suby.png',
+    width: 590,
+    height: 590,
+  },
+  {
+    src: '/images/thumbnail-design/Sabri Suby 2.png',
+    width: 370,
+    height: 370,
   },
 ]
 
@@ -170,6 +212,17 @@ const carousels = [
     caption:
       'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
   },
+]
+
+const yjwShowcases = [
+  { src: '/images/yjw/2.png', width: 200, height: 300 },
+  { src: '/images/yjw/1.png', width: 250, height: 350 },
+  { src: '/images/yjw/1000.png', width: 300, height: 400 },
+  { src: '/images/yjw/1088.png', width: 200, height: 300 },
+  { src: '/images/yjw/YJW-1.png', width: 250, height: 350 },
+  { src: '/images/yjw/3.png', width: 300, height: 400 },
+  { src: '/images/yjw/4.png', width: 200, height: 300 },
+  { src: '/images/yjw/Artwork 4.png', width: 500, height: 700 },
 ]
 
 const HomePage = () => {
@@ -346,16 +399,16 @@ const HomePage = () => {
         </CContainer>
 
         {/* Carousel */}
-        <CCarousel controls indicators pause>
+        <CCarousel controls indicators pause="hover">
           {carousels.map((carousel, index) => (
             <CCarouselItem key={index}>
-              <div class="ratio ratio-16x9">
+              <div className="ratio ratio-16x9">
                 <iframe
                   src={carousel.video}
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 ></iframe>
               </div>
               <CCarouselCaption className="d-none d-md-block align-self-start">
@@ -396,39 +449,69 @@ const HomePage = () => {
       </div>
 
       {/* Thumbnail Design */}
-      <div id="thumbnail-design" className="py-5">
-        <CContainer lg className="position-relative d-flex h-100">
-          <div className="d-block d-md-none position-absolute bottom-0 end-0 h-50">
-            <Image
-              alt="Thumbnail Design"
-              src={laptopFull}
-              className="object-fit-contain img-fluid h-100"
-            />
-          </div>
+      <div id="thumbnail-design">
+        {/* Intro */}
+        <div className="content-h-full py-5">
+          <CContainer lg className="position-relative d-flex h-100">
+            <div className="d-block d-md-none position-absolute bottom-0 end-0 h-50">
+              <Image
+                alt="Thumbnail Design"
+                src={laptopFull}
+                className="object-fit-contain img-fluid h-100"
+              />
+            </div>
 
-          <div className="d-none d-md-block position-absolute top-50 start-0 translate-middle h-75">
-            <Image
-              alt="Thumbnail Design"
-              src={laptopFull}
-              className="object-fit-contain img-fluid h-100"
-            />
-          </div>
+            <div className="d-none d-md-block position-absolute top-50 start-0 translate-middle h-75">
+              <Image
+                alt="Thumbnail Design"
+                src={laptopFull}
+                className="object-fit-contain img-fluid h-100"
+              />
+            </div>
 
-          <CRow className="my-md-auto">
-            <CCol xs={12} md={6}>
-              <h1 className="mb-4">Thumbnail Design</h1>
-              <p className="mb-4">
-                Client outreach is conducted through X (formerly Twitter), where initial samples are
-                crafted for mid-sized creators and shared via comments on their posts. I have
-                developed over 30 designs using Adobe Photoshop. Here are examples of my most
-                notable work.
-              </p>
-              <CButton color="light" className="bg-gradient rounded-4 p-3">
-                <CIcon icon={googleDriveColored} className="me-2" />
-                More of My Works
-              </CButton>
-            </CCol>
-            <CCol xs={12} md={6} className="order-md-first"></CCol>
+            <CRow className="my-md-auto">
+              <CCol xs={12} md={6}>
+                <h1 className="mb-4">Thumbnail Design</h1>
+                <p className="mb-4">
+                  Client outreach is conducted through X (formerly Twitter), where initial samples
+                  are crafted for mid-sized creators and shared via comments on their posts. I have
+                  developed over 30 designs using Adobe Photoshop. Here are examples of my most
+                  notable work.
+                </p>
+                <Link
+                  className="btn btn-light bg-gradient rounded-4 p-3"
+                  href={'https://drive.google.com/drive/folders/1-WvcndreMyaIiRfReDvZauRbUQRjlZ0U'}
+                  target="_blank"
+                >
+                  <CIcon icon={googleDriveColored} className="me-2" />
+                  More of My Works
+                </Link>
+              </CCol>
+              <CCol xs={12} md={6} className="order-md-first"></CCol>
+            </CRow>
+          </CContainer>
+        </div>
+
+        {/* Showcases */}
+        <CContainer lg className="py-5">
+          <CRow className="row-cols-1">
+            {thumbnailDesigns.map((design, index) => (
+              <CCol
+                key={index}
+                className={classNames(
+                  index % 3 === 0 ? 'text-start' : index % 3 === 1 ? 'text-center' : 'text-end',
+                  'p-3',
+                )}
+              >
+                <Image
+                  alt="Thumbnail Design"
+                  src={design.src}
+                  className="object-fit-cover img-fluid"
+                  width={design.width}
+                  height={design.height}
+                />
+              </CCol>
+            ))}
           </CRow>
         </CContainer>
       </div>
@@ -505,10 +588,14 @@ const HomePage = () => {
               </div>
             ))}
           </div>
-          <CButton color="light" className="bg-gradient rounded-4 p-3">
+          <Link
+            className="btn btn-light bg-gradient rounded-4 p-3"
+            href={'https://drive.google.com/drive/folders/1Vhfdd79YLKCHOSjWCbh8-PHjQcD2qJps'}
+            target="_blank"
+          >
             <CIcon icon={googleDriveColored} className="me-2" />
             More of My Works
-          </CButton>
+          </Link>
         </div>
       </div>
 
@@ -653,14 +740,122 @@ const HomePage = () => {
                 </CCol>
               ))}
               <CCol className="text-center">
-                <CButton color="light" className="bg-gradient rounded-4 p-3">
+                <Link
+                  className="btn btn-light bg-gradient rounded-4 p-3"
+                  href={'https://drive.google.com/drive/folders/1QKkqJhfl34nXFbuIzRn7VKQ0qQn46ON5'}
+                  target="_blank"
+                >
                   <CIcon icon={googleDriveColored} className="me-2" />
                   More of My Works
-                </CButton>
+                </Link>
               </CCol>
             </CRow>
           </div>
         </CContainer>
+      </div>
+
+      {/* Illustration */}
+      <div id="illustration" className="pt-5">
+        <CContainer lg>
+          <p className={classNames(akiraExpanded.className, 'py-4 display-2 lh-1 text-center')}>
+            Illustration
+          </p>
+        </CContainer>
+        <div className="w-100 overflow-x-hidden bg-dark">
+          <CRow>
+            <CCol lg={12}>
+              <Image
+                alt="Illustration"
+                src={illustrationImage}
+                className="object-fit-cover img-fluid"
+              />
+            </CCol>
+            <CCol xs={12} md={6} className="align-self-center">
+              <div className="p-5">
+                <h1>Fundamentas Illustration</h1>
+                <p>
+                  Fundamentas is an illustration competition organized by Torch Id, a bag company
+                  based in Bandung. Torch ID is seeking innovative ideas for their upcoming product
+                  lineup.
+                </p>
+              </div>
+            </CCol>
+            <CCol xs={12} md={6}>
+              <Image
+                alt="Fundamentas"
+                src={fundamentasImage}
+                className="object-fit-cover img-fluid"
+              />
+            </CCol>
+          </CRow>
+          <CRow className="g-5 py-5">
+            <CCol xs={6} className="align-self-end text-center">
+              <Image
+                alt="Fundamentas"
+                src="/images/illustration/mockup-hoodie.jpeg"
+                className="object-fit-cover img-fluid"
+                width={500}
+                height={500}
+              />
+            </CCol>
+            <CCol xs={6} className="align-self-end text-center">
+              <Image
+                alt="Fundamentas"
+                src="/images/illustration/mockup-totebag.jpeg"
+                className="object-fit-cover img-fluid"
+                width={400}
+                height={400}
+              />
+            </CCol>
+            <CCol xs={12} className="align-self-end text-center">
+              <Image
+                alt="Fundamentas"
+                src="/images/illustration/mockup-tshirt.jpeg"
+                className="object-fit-cover img-fluid"
+                width={500}
+                height={500}
+              />
+            </CCol>
+          </CRow>
+        </div>
+
+        {/* Young Joseph World */}
+        <div className="w-100 overflow-x-hidden bg-dark">
+          {/* Banner */}
+          <Image alt="Young Joseph World Banner" className="w-100 img-fluid" src={yjwBanner} />
+          {/* Intro */}
+          <CContainer lg>
+            <CRow className="py-4">
+              <CCol xs={12} md={6} className="order-md-last align-self-center">
+                <div className="text-center text-md-start p-4">
+                  <h1>Young Joseph World NFT Project</h1>
+                  <p>
+                    The YJW project tackles racial discrimination against Papuans in Indonesia,
+                    where lighter skin is often favored. Through this NFT project, I aim to
+                    challenge these biases and highlight the beauty and value of Papuan culture.
+                  </p>
+                </div>
+              </CCol>
+              <CCol xs={12} md={6}>
+                <Image alt="Young Joseph World Logo" src={yjwLogo} className="img-fluid" />
+              </CCol>
+            </CRow>
+          </CContainer>
+          {/* Showcase */}
+          <CRow className="row-cols-2">
+            {yjwShowcases.map((showcase, index) => (
+              <CCol key={index} className="p-2 text-center">
+                <Image
+                  alt="Young Joseph World Showcase"
+                  src={showcase.src}
+                  className="img-fluid"
+                  width={showcase.width}
+                  height={showcase.height}
+                />
+              </CCol>
+            ))}
+          </CRow>
+        </div>
       </div>
     </>
   )
