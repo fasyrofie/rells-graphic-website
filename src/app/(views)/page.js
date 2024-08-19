@@ -58,10 +58,38 @@ const dnzspeaksVideos = [
   'https://www.youtube.com/embed/jJ8Kos60bXo',
 ]
 
+const carousels = [
+  {
+    video: 'https://www.youtube.com/embed/ESURkeqSC1Y?si=5b8laAH2qwDfjOBc',
+    title: 'Long Form Content',
+    caption:
+      'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
+  },
+  {
+    video: 'https://www.youtube.com/embed/UhP2wphlaHw',
+    title: 'Long Form Content',
+    caption:
+      'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
+  },
+  {
+    video: 'https://www.youtube.com/embed/LvqI1Rz2NXo',
+    title: 'Long Form Content',
+    caption:
+      'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
+  },
+  {
+    video: 'https://www.youtube.com/embed/Kw2VZCH2-yQ',
+    title: 'Long Form Content',
+    caption:
+      'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
+  },
+]
+
 const dnzspeaksOtherVideos = [
   'https://www.youtube.com/embed/OwehzKVYJr8',
   'https://www.youtube.com/embed/0-zp5pxFDPk',
   'https://www.youtube.com/embed/Mz3clkwRXjQ',
+  'https://www.youtube.com/embed/3lkdsxqjRt0',
 ]
 
 const graphicDesigns = [
@@ -197,27 +225,6 @@ const yearbookDesigns = [
     image: '/images/yearbook-design/buta-5.png',
     name: 'Bogor 5 Middle School',
     year: '2022',
-  },
-]
-
-const carousels = [
-  {
-    video: 'https://www.youtube.com/embed/zpOULjyy-n8?rel=0',
-    title: 'Long Form Content',
-    caption:
-      'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
-  },
-  {
-    video: 'https://www.youtube.com/embed/IKH8dgWPFoE?si=yZBCJFyaYGGzJcpK',
-    title: 'Long Form Content',
-    caption:
-      'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
-  },
-  {
-    video: 'https://www.youtube.com/embed/Qs2-klYtq5Y?si=zMPNEghSveggkj0o',
-    title: 'Long Form Content',
-    caption:
-      'Your content idea is strong, but enhancing the editing quality can significantly boost viewer engagement. By refining the first two minutes of your video to serve as a compelling hook, you can increase viewer retention and ensure your content is watched through to the end.',
   },
 ]
 
@@ -437,7 +444,7 @@ const HomePage = () => {
 
         {/* Showcases 2 */}
         <CContainer lg className="py-5">
-          <CRow className="row-cols-1 row-cols-md-3 g-3 py-4">
+          <CRow className="row-cols-1 row-cols-md-4 g-3 py-4">
             {dnzspeaksOtherVideos.map((video, index) => (
               <CCol key={index}>
                 <div className="ratio ratio-9x16">
@@ -560,13 +567,15 @@ const HomePage = () => {
                   'p-3',
                 )}
               >
-                <Image
-                  alt="Thumbnail Design"
-                  src={design.src}
-                  className="object-fit-cover img-fluid"
-                  width={design.width}
-                  height={design.height}
-                />
+                <FadeIn>
+                  <Image
+                    alt="Thumbnail Design"
+                    src={design.src}
+                    className="object-fit-cover img-fluid"
+                    width={design.width}
+                    height={design.height}
+                  />
+                </FadeIn>
               </CCol>
             ))}
           </CRow>
