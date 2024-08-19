@@ -9,7 +9,7 @@ export const inter = Inter({
 export const akiraExpanded = localFont({
   src: [
     {
-      path: '../assets/fonts/AkiraExpanded-Bold.otf',
+      path: '/../assets/fonts/AkiraExpanded-Bold.otf',
       weight: '800',
     },
   ],

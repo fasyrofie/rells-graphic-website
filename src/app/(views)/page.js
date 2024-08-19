@@ -30,6 +30,8 @@ import {
 
 import { akiraExpanded } from '@/app/fonts'
 
+import { BASE_PATH } from '@/utils/prefix'
+
 import profileBackground from '@/assets/images/profile-photo.png'
 
 import DandZSpeaksAvatar from '@/assets/images/DandZSpeaks-avatar.png'
@@ -356,7 +358,7 @@ const HomePage = () => {
           {/* <CContainer lg> */}
           <div className="ratio ratio-16x9">
             <video className="object-fit-cover" controls>
-              <source src="/videos/DandZSpeaks-video.mp4" type="video/mp4" />
+              <source src={`${BASE_PATH}/videos/DandZSpeaks-video.mp4`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -498,7 +500,7 @@ const HomePage = () => {
                 <div className="ratio ratio-1x1 bg-dark bg-gradient border border-secondary rounded-5">
                   <Image
                     alt="Graphic Design"
-                    src={design.image}
+                    src={`${BASE_PATH}${design.image}`}
                     className="p-4 object-fit-contain"
                     width={300}
                     height={300}
@@ -570,7 +572,7 @@ const HomePage = () => {
                 <FadeIn>
                   <Image
                     alt="Thumbnail Design"
-                    src={design.src}
+                    src={`${BASE_PATH}${design.src}`}
                     className="object-fit-cover img-fluid"
                     width={design.width}
                     height={design.height}
@@ -619,14 +621,14 @@ const HomePage = () => {
                   <div className="client ratio ratio-1x1 border border-secondary rounded-4 overflow-hidden">
                     <Image
                       alt="Social Media Feed"
-                      src={design.feed}
+                      src={`${BASE_PATH}${design.feed}`}
                       className="client-feed object-fit-cover"
                       width={298}
                       height={298}
                     />
                     <Image
                       alt="Social Media Logo"
-                      src={design.logo}
+                      src={`${BASE_PATH}${design.logo}`}
                       className="client-logo object-fit-contain position-absolute top-50 start-50 translate-middle p-5"
                       width={100}
                       height={100}
@@ -646,7 +648,7 @@ const HomePage = () => {
               <div className="px-4" style={{ width: '200px' }} key={index}>
                 <Image
                   alt="Socmed Design"
-                  src={design}
+                  src={`${BASE_PATH}${design}`}
                   className="object-fit-contain"
                   width={100}
                   height={100}
@@ -685,7 +687,7 @@ const HomePage = () => {
                 <FadeIn>
                   <Image
                     alt="Yearbook Design"
-                    src="/images/yearbook-design/yearbook-intro.png"
+                    src={`${BASE_PATH}/images/yearbook-design/yearbook-intro.png`}
                     className="img-fluid"
                     width={650}
                     height={650}
@@ -703,7 +705,7 @@ const HomePage = () => {
               <CCol xs={12} md={7}>
                 <Image
                   alt="Group Photo Page"
-                  src="/images/yearbook-design/group-1.png"
+                  src={`${BASE_PATH}/images/yearbook-design/group-1.png`}
                   className="img-fluid"
                   width={500}
                   height={500}
@@ -720,7 +722,7 @@ const HomePage = () => {
               <CCol xs={12} md={5}>
                 <Image
                   alt="Drone Shoot"
-                  src="/images/yearbook-design/drone-1.png"
+                  src={`${BASE_PATH}/images/yearbook-design/drone-1.png`}
                   className="img-fluid"
                   width={500}
                   height={500}
@@ -735,7 +737,7 @@ const HomePage = () => {
                   <CCol>
                     <Image
                       alt="Portrait Photo"
-                      src="/images/yearbook-design/portrait-1.png"
+                      src={`${BASE_PATH}/images/yearbook-design/portrait-1.png`}
                       className="img-fluid"
                       width={500}
                       height={500}
@@ -746,7 +748,7 @@ const HomePage = () => {
                       <CCol>
                         <Image
                           alt="Portrait Photo"
-                          src="/images/yearbook-design/portrait-2.png"
+                          src={`${BASE_PATH}/images/yearbook-design/portrait-2.png`}
                           className="img-fluid"
                           width={500}
                           height={500}
@@ -755,7 +757,7 @@ const HomePage = () => {
                       <CCol>
                         <Image
                           alt="Portrait Photo"
-                          src="/images/yearbook-design/portrait-3.png"
+                          src={`${BASE_PATH}/images/yearbook-design/portrait-3.png`}
                           className="img-fluid"
                           width={500}
                           height={500}
@@ -771,7 +773,7 @@ const HomePage = () => {
               <CCol xs={12} md={6}>
                 <Image
                   alt="Cover Design & Welcome Page"
-                  src="/images/yearbook-design/cover-1.png"
+                  src={`${BASE_PATH}/images/yearbook-design/cover-1.png`}
                   className="img-fluid"
                   width={500}
                   height={500}
@@ -795,7 +797,7 @@ const HomePage = () => {
                   <div className="ratio ratio-1x1">
                     <Image
                       alt="Yearbook Design"
-                      src={design.image}
+                      src={`${BASE_PATH}${design.image}`}
                       className="object-fit-contain"
                       width={300}
                       height={300}
@@ -859,7 +861,7 @@ const HomePage = () => {
             <CCol xs={6} className="align-self-end text-center">
               <Image
                 alt="Fundamentas"
-                src="/images/illustration/mockup-hoodie.jpeg"
+                src={`${BASE_PATH}/images/illustration/mockup-hoodie.jpeg`}
                 className="object-fit-cover img-fluid"
                 width={500}
                 height={500}
@@ -868,7 +870,7 @@ const HomePage = () => {
             <CCol xs={6} className="align-self-end text-center">
               <Image
                 alt="Fundamentas"
-                src="/images/illustration/mockup-totebag.jpeg"
+                src={`${BASE_PATH}/images/illustration/mockup-totebag.jpeg`}
                 className="object-fit-cover img-fluid"
                 width={400}
                 height={400}
@@ -877,7 +879,7 @@ const HomePage = () => {
             <CCol xs={12} className="align-self-end text-center">
               <Image
                 alt="Fundamentas"
-                src="/images/illustration/mockup-tshirt.jpeg"
+                src={`${BASE_PATH}/images/illustration/mockup-tshirt.jpeg`}
                 className="object-fit-cover img-fluid"
                 width={500}
                 height={500}
@@ -914,7 +916,7 @@ const HomePage = () => {
               <CCol key={index} className="p-4 text-center">
                 <Image
                   alt="Young Joseph World Showcase"
-                  src={showcase.src}
+                  src={`${BASE_PATH}${showcase.src}`}
                   className="img-fluid"
                   width={showcase.width}
                   height={showcase.height}
@@ -930,7 +932,7 @@ const HomePage = () => {
                   <CCarouselItem key={index}>
                     <Image
                       alt="Young Joseph World Showcase"
-                      src={artwork}
+                      src={`${BASE_PATH}${artwork}`}
                       className="img-fluid"
                       width={500}
                       height={500}
