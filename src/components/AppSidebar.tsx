@@ -19,7 +19,8 @@ const AppSidebar = (): JSX.Element => {
 
   return (
     <CSidebar
-      colorScheme="light"
+      className='bg-dark'
+      colorScheme="dark"
       position="fixed"
       unfoldable={unfoldable}
       visible={sidebarShow}
@@ -27,7 +28,7 @@ const AppSidebar = (): JSX.Element => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarHeader className="bg-primary border-bottom">
+      <CSidebarHeader className="bg-dark border-bottom">
         <CCloseButton
           className="m-0"
           dark

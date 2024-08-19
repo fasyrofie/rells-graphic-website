@@ -4,6 +4,7 @@ import adobePhotoshop from './adobe-photoshop'
 import adobePremierePro from './adobe-premiere-pro'
 import discord from './discord'
 import googleDriveColored from './google-drive-colored'
+import videoCamera from './video-camera'
 import x from './x'
 
 export {
@@ -12,6 +13,7 @@ export {
   adobePhotoshop,
   adobePremierePro,
   discord,
-  x,
   googleDriveColored,
+  videoCamera,
+  x,
 }

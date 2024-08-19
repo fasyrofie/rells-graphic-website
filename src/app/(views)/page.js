@@ -7,7 +7,6 @@ import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
 import {
   CBadge,
-  CButton,
   CCarousel,
   CCarouselCaption,
   CCarouselItem,
@@ -18,6 +17,7 @@ import {
   CRow,
 } from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
+import { cilArrowRight } from '@coreui/icons'
 import {
   adobeAfterEffects,
   adobeIndesign,
@@ -25,6 +25,7 @@ import {
   adobePremierePro,
   discord,
   googleDriveColored,
+  videoCamera,
 } from '@/assets/icons'
 
 import { akiraExpanded } from '@/app/fonts'
@@ -51,10 +52,16 @@ import yjwBanner from '@/assets/images/yjw/yjw-banner.jpeg'
 import yjwLogo from '@/assets/images/yjw/yjw-logo.png'
 
 const dnzspeaksVideos = [
-  '/videos/DnZSpeaks/April Short 9_Done.mp4',
-  '/videos/DnZSpeaks/eminem.mp4',
-  '/videos/DnZSpeaks/Jack Doherty_done.mp4',
-  '/videos/DnZSpeaks/Lil Dicky_Captioned.mp4',
+  'https://www.youtube.com/embed/NrNkjhXB6ek',
+  'https://www.youtube.com/embed/F18LvmSif-A',
+  'https://www.youtube.com/embed/jmr_dBWS-zI',
+  'https://www.youtube.com/embed/jJ8Kos60bXo',
+]
+
+const dnzspeaksOtherVideos = [
+  'https://www.youtube.com/embed/OwehzKVYJr8',
+  'https://www.youtube.com/embed/0-zp5pxFDPk',
+  'https://www.youtube.com/embed/Mz3clkwRXjQ',
 ]
 
 const graphicDesigns = [
@@ -222,7 +229,13 @@ const yjwShowcases = [
   { src: '/images/yjw/YJW-1.png', width: 250, height: 350 },
   { src: '/images/yjw/3.png', width: 300, height: 400 },
   { src: '/images/yjw/4.png', width: 200, height: 300 },
-  { src: '/images/yjw/Artwork 4.png', width: 500, height: 700 },
+]
+
+const yjwArtworks = [
+  '/images/yjw/Artwork 1.png',
+  '/images/yjw/Artwork 2.png',
+  '/images/yjw/Artwork 3.png',
+  '/images/yjw/Artwork 4.png',
 ]
 
 const HomePage = () => {
@@ -349,10 +362,13 @@ const HomePage = () => {
             {dnzspeaksVideos.map((video, index) => (
               <CCol key={index}>
                 <div className="ratio ratio-9x16">
-                  <video className="object-fit-cover" controls>
-                    <source src={video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <iframe
+                    src={video}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </CCol>
             ))}
@@ -418,6 +434,47 @@ const HomePage = () => {
             </CCarouselItem>
           ))}
         </CCarousel>
+
+        {/* Showcases 2 */}
+        <CContainer lg className="py-5">
+          <CRow className="row-cols-1 row-cols-md-3 g-3 py-4">
+            {dnzspeaksOtherVideos.map((video, index) => (
+              <CCol key={index}>
+                <div className="ratio ratio-9x16">
+                  <iframe
+                    src={video}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </CCol>
+            ))}
+          </CRow>
+
+          <CRow className="g-4 justify-content-center align-items-center py-4">
+            <CCol xs="auto">
+              <h1>
+                Order Your
+                <br />
+                Video Now!
+              </h1>
+            </CCol>
+            <CCol xs="auto">
+              <CIcon icon={cilArrowRight} size="5xl" />
+            </CCol>
+            <CCol xs="auto">
+              <Link
+                className="btn btn-light bg-gradient rounded-4 p-3"
+                href={'https://drive.google.com/drive/folders/1-WvcndreMyaIiRfReDvZauRbUQRjlZ0U'}
+                target="_blank"
+              >
+                <CIcon icon={videoCamera} className="me-2" />I want Rell&apos;s Graphic&apos;s Video
+              </Link>
+            </CCol>
+          </CRow>
+        </CContainer>
       </div>
 
       {/* Graphic Design */}
@@ -539,8 +596,8 @@ const HomePage = () => {
         <div className="text-center py-4">
           <h1 className="mb-4">Social Media Design</h1>
           <p className="mx-auto" style={{ maxWidth: '509px' }}>
-            Throughout 2022 - 2024, I’ve handled 21 brand’s social media post design with a lot of
-            design theme variety, from kids to Gen-Z design theme.
+            Throughout 2022 - 2024, I&apos;ve handled 21 brand&apos;s social media post design with
+            a lot of design theme variety, from kids to Gen-Z design theme.
           </p>
         </div>
 
@@ -646,8 +703,8 @@ const HomePage = () => {
                   <h5 className="fw-bold">Group Photo Page.</h5>
                   <p>
                     The most crucial part of the book. This is where collaboration require the most.
-                    Student’s wild ideas have to come true with Art director’s guide and
-                    photographer’s skill.
+                    Student&apos;s wild ideas have to come true with Art director&apos;s guide and
+                    photographer&apos;s skill.
                   </p>
                 </div>
               </CCol>
@@ -756,6 +813,7 @@ const HomePage = () => {
 
       {/* Illustration */}
       <div id="illustration" className="pt-5">
+        {/* Intro */}
         <CContainer lg>
           <p className={classNames(akiraExpanded.className, 'py-4 display-2 lh-1 text-center')}>
             Illustration
@@ -820,7 +878,7 @@ const HomePage = () => {
         </div>
 
         {/* Young Joseph World */}
-        <div className="w-100 overflow-x-hidden bg-dark">
+        <div id="yjw" className="w-100 overflow-x-hidden bg-dark">
           {/* Banner */}
           <Image alt="Young Joseph World Banner" className="w-100 img-fluid" src={yjwBanner} />
           {/* Intro */}
@@ -844,7 +902,7 @@ const HomePage = () => {
           {/* Showcase */}
           <CRow className="row-cols-2">
             {yjwShowcases.map((showcase, index) => (
-              <CCol key={index} className="p-2 text-center">
+              <CCol key={index} className="p-4 text-center">
                 <Image
                   alt="Young Joseph World Showcase"
                   src={showcase.src}
@@ -854,6 +912,24 @@ const HomePage = () => {
                 />
               </CCol>
             ))}
+          </CRow>
+          {/* Artwork */}
+          <CRow className="justify-content-center">
+            <CCol className="p-4 text-center" xs="auto">
+              <CCarousel className="artwork" controls transition="crossfade">
+                {yjwArtworks.map((artwork, index) => (
+                  <CCarouselItem key={index}>
+                    <Image
+                      alt="Young Joseph World Showcase"
+                      src={artwork}
+                      className="img-fluid"
+                      width={500}
+                      height={500}
+                    />
+                  </CCarouselItem>
+                ))}
+              </CCarousel>
+            </CCol>
           </CRow>
         </div>
       </div>

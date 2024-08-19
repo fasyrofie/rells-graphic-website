@@ -107,6 +107,22 @@ body {
   }
 }
 
+#illustration {
+  #yjw {
+    .artwork {
+      .carousel-control-prev {
+        display: none !important;
+      }
+      .carousel-control-next {
+        width: 100% !important;
+        > * {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
 .footer {
   background-image: linear-gradient(0deg, #1a1a1a, #373737);
   border-top: 0 !important;
