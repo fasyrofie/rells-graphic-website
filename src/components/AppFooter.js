@@ -3,13 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { CCol, CFooter, CRow, CSidebarBrand } from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
-import {
-  cibInstagram,
-  cibTiktok,
-  cibTwitter,
-  cilLocationPin,
-  cilScreenSmartphone,
-} from '@coreui/icons'
+import { cibInstagram, cibTiktok, cilLocationPin, cilScreenSmartphone } from '@coreui/icons'
 import { x } from '@/assets/icons'
 
 import { logo } from '@/public/brand/logo'

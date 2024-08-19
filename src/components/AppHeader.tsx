@@ -12,10 +12,13 @@ import {
   CSidebarBrand,
   CButton,
 } from '@coreui/react-pro'
-import {
-  cilMenu,
-} from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
+import {
+  cilMenu, cibInstagram, cibTiktok,
+  cilEnvelopeClosed,
+  cibWhatsapp
+} from '@coreui/icons'
+import { x } from '@/assets/icons'
 
 import { useTypedSelector } from './../store'
 
@@ -61,9 +64,51 @@ const AppHeader = (): JSX.Element => {
           <CButton color="nav" shape="rounded-pill">Yearbook Design</CButton>
           <CButton color="nav" shape="rounded-pill">Illustration</CButton>
         </CForm>
-        <CHeaderNav className="ms-auto ms-md-0 d-none d-md-flex">
-          <AppHeaderDropdown />
-        </CHeaderNav>
+        <div className='d-none d-xl-flex align-items-center'>
+          {/* Instagram */}
+          <Link
+            className="text-reset text-decoration-none mx-3"
+            href="https://www.instagram.com/rellsgraphic?igsh=MXJ2dnd2aWUzM2JvcA%3D%3D&utm_source=qr"
+            target="_blank"
+          >
+            <CIcon icon={cibInstagram} size="lg" />
+          </Link>
+
+          {/* Tiktok */}
+          <Link
+            className="text-reset text-decoration-none mx-3"
+            href="https://www.tiktok.com/@rells.graphic?_t=8oYYy3Ofs9p&_r=1"
+            target="_blank"
+          >
+            <CIcon icon={cibTiktok} size="lg" />
+          </Link>
+
+          {/* Twitter */}
+          <Link
+            className="text-reset text-decoration-none mx-3"
+            href="https://x.com/RellsGraphic"
+            target="_blank"
+          >
+            <CIcon icon={x} size="lg" />
+          </Link>
+
+          {/* Email */}
+          <Link
+            className="btn btn-light rounded-pill mx-3"
+            href="mailto:asyrofiefarrell@gmail.com"
+          >
+            <CIcon icon={cilEnvelopeClosed} className='text-dark me-2' />Email me
+          </Link>
+
+          {/* WhatsApp */}
+          <Link
+            className="btn btn-success text-white rounded-pill mx-3"
+            href="https://wa.me/6282182324543"
+            target="_blank"
+          >
+            <CIcon icon={cibWhatsapp} />
+          </Link>
+        </div>
       </CContainer>
     </CHeader>
   )
