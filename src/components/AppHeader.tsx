@@ -3,11 +3,13 @@ import { useDispatch } from 'react-redux'
 import Link from 'next/link'
 import classNames from 'classnames'
 
+// 1. Contact Me on md size
+// 2. Hambuger menu ambil dari Figma
+
 import {
   CContainer,
   CForm,
   CHeader,
-  CHeaderNav,
   CHeaderToggler,
   CSidebarBrand,
   CButton,
@@ -18,13 +20,9 @@ import {
   cilEnvelopeClosed,
   cibWhatsapp
 } from '@coreui/icons'
-import { x } from '@/assets/icons'
+import { hamburger, x } from '@/assets/icons'
 
 import { useTypedSelector } from './../store'
-
-import {
-  AppHeaderDropdown,
-} from './header/'
 
 import { logo } from '@/public/brand/logo'
 import { sygnet } from '@/public/brand/sygnet'
@@ -50,7 +48,7 @@ const AppHeader = (): JSX.Element => {
           onClick={() => dispatch({ type: 'set', sidebarShow: !sidebarShow })}
           style={{ marginInlineStart: '-14px' }}
         >
-          <CIcon icon={cilMenu} size="lg" />
+          <CIcon icon={hamburger} size="lg" />
         </CHeaderToggler>
         <CSidebarBrand as={Link} href="/">
           <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
@@ -60,7 +58,9 @@ const AppHeader = (): JSX.Element => {
           <CButton color="nav" shape="rounded-pill">About Me</CButton>
           <CButton color="nav" shape="rounded-pill">Video Editing</CButton>
           <CButton color="nav" shape="rounded-pill">Thumbnail Design</CButton>
-          <CButton color="nav" shape="rounded-pill">Socmed Design</CButton>
+          <Link href="/#socmed-design">
+            <CButton color="nav" shape="rounded-pill">Socmed Design</CButton>
+          </Link>
           <CButton color="nav" shape="rounded-pill">Yearbook Design</CButton>
           <CButton color="nav" shape="rounded-pill">Illustration</CButton>
         </CForm>

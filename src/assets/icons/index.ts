@@ -6,6 +6,7 @@ import discord from './discord'
 import googleDriveColored from './google-drive-colored'
 import videoCamera from './video-camera'
 import x from './x'
+import hamburger from './hamburger'
 
 export {
   adobeAfterEffects,
@@ -16,4 +17,5 @@ export {
   googleDriveColored,
   videoCamera,
   x,
+  hamburger,
 }

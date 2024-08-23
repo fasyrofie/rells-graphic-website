@@ -19,7 +19,7 @@ const AppSidebar = (): JSX.Element => {
 
   return (
     <CSidebar
-      className='bg-dark'
+      className='bg-dark bg-gradient'
       colorScheme="dark"
       position="fixed"
       unfoldable={unfoldable}
