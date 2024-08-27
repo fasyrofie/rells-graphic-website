@@ -94,7 +94,7 @@ const SocmedDesign = () => {
           <CRow className="g-3 g-md-5 row-cols-2 row-cols-md-4">
             {socmedDesigns.map((design, index) => (
               <CCol key={index}>
-                <div className="client ratio ratio-1x1 border border-secondary rounded-4 overflow-hidden">
+                <div className="client ratio ratio-1x1 border border-secondary overflow-hidden">
                   <Image
                     alt="Social Media Feed"
                     src={`${BASE_PATH}${design.feed}`}
