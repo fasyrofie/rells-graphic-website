@@ -69,7 +69,7 @@ const YearbookDesign = () => {
       </div>
 
       {/* Showcase */}
-      <CContainer lg className="py-5">
+      <CContainer lg className="py-5 px-5 px-md-3">
         <div className="py-5">
           <CRow className="g-5 py-5">
             {/* Group Photo */}

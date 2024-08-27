@@ -154,7 +154,7 @@ const Illustration = () => {
         </CContainer>
 
         {/* Showcase */}
-        <CContainer lg className="mb-5">
+        <CContainer lg className="mb-5 px-5 px-md-3">
           <CRow className="row-cols-2 row-cols-lg-4 justify-content-center">
             {yjwShowcases.map((showcase, index) => (
               <CCol key={index} className="p-4 text-center">
