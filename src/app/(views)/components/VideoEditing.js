@@ -114,8 +114,8 @@ const VideoEditing = () => {
       </div>
 
       {/* Showcases 2 */}
-      <CContainer lg className="py-5" style={{ maxWidth: '720px' }}>
-        <CRow className="row-cols-1 row-cols-md-2 g-3">
+      <CContainer lg className="py-5 px-5 px-md-3" style={{ maxWidth: '720px' }}>
+        <CRow className="row-cols-1 row-cols-md-2 g-4">
           {dnzspeaksVideos.map((video, index) => (
             <CCol key={index}>
               <div className="ratio ratio-9x16">
@@ -191,8 +191,8 @@ const VideoEditing = () => {
       </CCarousel>
 
       {/* Showcases 2 */}
-      <CContainer lg className="py-5">
-        <CRow className="row-cols-1 row-cols-md-4 g-3 py-4">
+      <CContainer lg className="py-5 px-5 px-md-3">
+        <CRow className="row-cols-1 row-cols-md-4 g-4 py-4">
           {dnzspeaksOtherVideos.map((video, index) => (
             <CCol key={index}>
               <div className="ratio ratio-9x16">

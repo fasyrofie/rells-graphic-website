@@ -43,6 +43,8 @@ const GraphicDesign = () => {
           <br />
           design
         </p>
+      </CContainer>
+      <CContainer lg className="px-5 px-md-3">
         <CRow className="g-4">
           {graphicDesigns.map((design, index) => (
             <CCol key={index} xs={12} md={6} lg={3}>

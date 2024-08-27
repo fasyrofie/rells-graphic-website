@@ -89,9 +89,9 @@ const SocmedDesign = () => {
       </div>
 
       {/* Works */}
-      <CContainer lg className="py-5">
+      <CContainer lg className="py-5 px-5 px-md-3">
         <div id="hightlight-clients">
-          <CRow className="g-3 g-md-5 row-cols-2 row-cols-md-4">
+          <CRow className="g-3 g-md-4 g-lg-5 row-cols-2 row-cols-md-4">
             {socmedDesigns.map((design, index) => (
               <CCol key={index}>
                 <div className="client ratio ratio-1x1 border border-secondary overflow-hidden">

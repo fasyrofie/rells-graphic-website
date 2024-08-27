@@ -132,7 +132,10 @@ body {
         transition: filter 100ms linear;
       }
       .client-logo {
-        padding: 4rem;
+        padding: 2rem;
+        @include media-breakpoint-up(sm) {
+          padding: 3rem;
+        }
       }
     }
   }
