@@ -134,7 +134,7 @@ const VideoEditing = () => {
 
       {/* Review */}
       <CContainer lg className="py-5">
-        <div className="testimony rounded-5 p-5">
+        <div className="testimony rounded-5 p-0 p-md-4 p-lg-5">
           <div className="p-0 p-lg-2 p-xl-5">
             <CRow className="g-3 g-lg-4 g-xl-5 align-items-center px-5 py-3">
               <CCol xs={12} md="auto" className="text-center">
