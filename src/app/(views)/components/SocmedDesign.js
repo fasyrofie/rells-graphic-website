@@ -136,7 +136,7 @@ const SocmedDesign = () => {
         </div>
         <div className="py-4">
           <Link
-            className="btn btn-light bg-gradient rounded-4 p-3"
+            className="btn btn-white-gradient rounded-4 p-3"
             href={'https://drive.google.com/drive/folders/1Vhfdd79YLKCHOSjWCbh8-PHjQcD2qJps'}
             target="_blank"
           >

@@ -77,7 +77,7 @@ const ThumbnailDesign = () => {
                 notable work.
               </p>
               <Link
-                className="btn btn-light bg-gradient rounded-4 p-3"
+                className="btn btn-white-gradient rounded-4 p-3"
                 href={'https://drive.google.com/drive/folders/1-WvcndreMyaIiRfReDvZauRbUQRjlZ0U'}
                 target="_blank"
               >

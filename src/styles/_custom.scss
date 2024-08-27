@@ -16,6 +16,15 @@ body {
   background-color: transparent !important;
 }
 
+.btn-white-gradient {
+  border: none;
+  background-image: linear-gradient(to bottom, #e2e2e2, #ababab);
+  &:hover {
+    background-image: linear-gradient(to bottom, darken(#e2e2e2, 70%), darken(#ababab, 70%));
+    border: $btn-border-width #474747 $border-style;
+  }
+}
+
 .content-h-full {
   height: calc(100vh - (4rem));
 }

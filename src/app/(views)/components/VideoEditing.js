@@ -221,7 +221,7 @@ const VideoEditing = () => {
           </CCol>
           <CCol xs="auto">
             <Link
-              className="btn btn-light bg-gradient rounded-4 p-3"
+              className="btn btn-white-gradient rounded-4 p-3"
               href="mailto:asyrofiefarrell@gmail.com"
             >
               <CIcon icon={videoCamera} className="me-2" />I want Rell&apos;s Graphic&apos;s Video

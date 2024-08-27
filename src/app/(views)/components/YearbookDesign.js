@@ -165,9 +165,9 @@ const YearbookDesign = () => {
 
         {/* Yearbook */}
         <div className="py-5">
-          <CRow className="g-5 py-5 align-items-center">
+          <CRow className="g-4 g-md-5 py-5 align-items-center">
             {yearbookDesigns.map((design, index) => (
-              <CCol key={index} xs={12} md={4}>
+              <CCol key={index} xs={6} md={4}>
                 <div className="ratio ratio-1x1 mb-3">
                   <Image
                     alt="Yearbook Design"
@@ -183,7 +183,7 @@ const YearbookDesign = () => {
             ))}
             <CCol className="text-center">
               <Link
-                className="btn btn-light bg-gradient rounded-4 p-3"
+                className="btn btn-white-gradient rounded-4 p-3"
                 href={'https://drive.google.com/drive/folders/1QKkqJhfl34nXFbuIzRn7VKQ0qQn46ON5'}
                 target="_blank"
               >
