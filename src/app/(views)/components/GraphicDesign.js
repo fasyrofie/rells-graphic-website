@@ -36,26 +36,26 @@ const graphicDesigns = [
 
 const GraphicDesign = () => {
   return (
-    <div id="graphic-design" className="bg-dark py-5">
+    <div id="graphic-design" className="bg-dark overflow-x-hidden py-5">
       <CContainer lg>
         <p className={classNames(akiraExpanded.className, 'py-4 display-2 lh-1 text-center')}>
           Graphic
           <br />
           design
         </p>
-        <CRow className="g-3">
+        <CRow className="g-4">
           {graphicDesigns.map((design, index) => (
             <CCol key={index} xs={12} md={6} lg={3}>
-              <div className="ratio ratio-1x1 bg-dark bg-gradient border border-secondary rounded-5">
+              <div className="ratio ratio-1x1 bg-dark bg-gradient border border-secondary rounded-5 mb-4">
                 <Image
                   alt="Graphic Design"
                   src={`${BASE_PATH}${design.image}`}
-                  className="p-4 object-fit-contain"
+                  className="p-5 object-fit-contain"
                   width={300}
                   height={300}
                 />
               </div>
-              <h4 className="text-center mt-3">{design.name}</h4>
+              <h4 className="text-center fw-bold mb-3">{design.name}</h4>
               <p className="text-center">{design.description}</p>
             </CCol>
           ))}

@@ -64,7 +64,7 @@ const dnzspeaksOtherVideos = [
 
 const VideoEditing = () => {
   return (
-    <div id="video-editing">
+    <div id="video-editing" className="overflow-x-hidden">
       {/* DandZSpeaks */}
       {/* Intro */}
       <div className="position-relative bg-dark py-5">

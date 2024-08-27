@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import FadeIn from '@/components/FadeIn'
+import SectionHeading from '@/components/SectionHeading'
 import { CCol, CContainer, CRow } from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
 import { googleDriveColored } from '@/assets/icons'
@@ -37,14 +38,14 @@ const yearbookDesigns = [
 
 const YearbookDesign = () => {
   return (
-    <div id="yearbook-design" className="py-5">
+    <div id="yearbook-design" className="overflow-x-hidden py-5">
       {/* Intro */}
       <div className="bg-dark">
-        <CContainer lg className="py-4">
-          <CRow className="g-4">
+        <CContainer lg className="py-5">
+          <CRow className="g-5">
             <CCol xs={12} md={6} className="d-flex align-items-center">
               <div>
-                <h1>Yearbook Design</h1>
+                <SectionHeading>Yearbook Design</SectionHeading>
                 <p>
                   I have been employed with Selected Comm+ since 2022. In 2023, I transitioned to
                   another agency, Noni Kolektiv, where I initially worked as a freelancer before
@@ -68,44 +69,45 @@ const YearbookDesign = () => {
       </div>
 
       {/* Showcase */}
-      <CContainer lg className="py-4">
-        <div className="py-4">
-          <CRow className="g-4 py-4">
+      <CContainer lg className="py-5">
+        <div className="py-5">
+          <CRow className="g-5 py-5">
+            {/* Group Photo */}
             <CCol xs={12} md={7}>
               <Image
                 alt="Group Photo Page"
                 src={`${BASE_PATH}/images/yearbook-design/group-1.png`}
-                className="img-fluid"
+                className="img-fluid mb-3"
                 width={708}
                 height={611}
               />
-              <div className="py-3">
-                <h5 className="fw-bold">Group Photo Page.</h5>
-                <p>
-                  The most crucial part of the book. This is where collaboration
-                  <br />
-                  require the most. Student&apos;s wild ideas have to come true with Art
-                  <br />
-                  director&apos;s guide and photographer&apos;s skill.
+              <div className="pt-3">
+                <h5 className="fw-bold mb-3">Group Photo Page.</h5>
+                <p className="mb-0" style={{ maxWidth: '444px' }}>
+                  The most crucial part of the book. This is where collaboration require the most.
+                  Student&apos;s wild ideas have to come true with Art director&apos;s guide and
+                  photographer&apos;s skill.
                 </p>
               </div>
             </CCol>
+            {/* Drone Shot */}
             <CCol xs={12} md={5}>
               <Image
                 alt="Drone Shoot"
                 src={`${BASE_PATH}/images/yearbook-design/drone-1.png`}
-                className="img-fluid"
+                className="img-fluid mb-3"
                 width={429}
                 height={306}
               />
-              <div className="py-3">
-                <h5 className="fw-bold">Drone Shoot</h5>
-                <p>Students lining up to form the name of their class.</p>
+              <div className="pt-3">
+                <h5 className="fw-bold mb-3">Drone Shoot</h5>
+                <p className="mb-0">Students lining up to form the name of their class.</p>
               </div>
             </CCol>
-            <CCol xs={12} md={7}>
-              <CRow>
-                <CCol xs="auto">
+            {/* Portrait Photo */}
+            <CCol xs={12} md={7} className="align-self-end">
+              <CRow className="g-4 align-items-end">
+                <CCol xs={6} md="auto">
                   <Image
                     alt="Portrait Photo"
                     src={`${BASE_PATH}/images/yearbook-design/portrait-1.png`}
@@ -114,8 +116,8 @@ const YearbookDesign = () => {
                     height={683}
                   />
                 </CCol>
-                <CCol>
-                  <CRow className="g-4 row-cols-1">
+                <CCol xs={6} md>
+                  <CRow className="g-3 row-cols-1">
                     <CCol>
                       <Image
                         alt="Portrait Photo"
@@ -135,13 +137,14 @@ const YearbookDesign = () => {
                       />
                     </CCol>
                     <CCol className="order-md-first">
-                      <h5 className="fw-bold">Portrait Photo.</h5>
+                      <h5 className="fw-bold mb-0 mb-md-3">Portrait Photo.</h5>
                     </CCol>
                   </CRow>
                 </CCol>
               </CRow>
             </CCol>
-            <CCol xs={12} md={5}>
+            {/* Cover Design & Welcome Page */}
+            <CCol xs={12} md={5} className="align-self-end">
               <Image
                 alt="Cover Design & Welcome Page"
                 src={`${BASE_PATH}/images/yearbook-design/cover-1.png`}
@@ -149,9 +152,9 @@ const YearbookDesign = () => {
                 width={599}
                 height={658}
               />
-              <div className="py-3">
-                <h5 className="fw-bold">Cover Design & Welcome Page</h5>
-                <p>
+              <div className="pt-3 mt-3">
+                <h5 className="fw-bold mb-3">Cover Design & Welcome Page</h5>
+                <p className="mb-0">
                   These part is the part we first see. Everything has to be a same theme with the
                   request.
                 </p>
@@ -161,11 +164,11 @@ const YearbookDesign = () => {
         </div>
 
         {/* Yearbook */}
-        <div className="py-4">
-          <CRow className="g-4 py-4 align-items-center">
+        <div className="py-5">
+          <CRow className="g-5 py-5 align-items-center">
             {yearbookDesigns.map((design, index) => (
               <CCol key={index} xs={12} md={4}>
-                <div className="ratio ratio-1x1">
+                <div className="ratio ratio-1x1 mb-3">
                   <Image
                     alt="Yearbook Design"
                     src={`${BASE_PATH}${design.image}`}
@@ -174,8 +177,8 @@ const YearbookDesign = () => {
                     height={300}
                   />
                 </div>
-                <h4 className="mt-3">{design.name}</h4>
-                <p className="">{design.year}</p>
+                <h4 className="fw-bold">{design.name}</h4>
+                <p className="text-light">{design.year}</p>
               </CCol>
             ))}
             <CCol className="text-center">

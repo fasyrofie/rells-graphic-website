@@ -8,6 +8,14 @@ body {
     4.5rem 4.5rem;
 }
 
+.navbar-dark {
+  background-color: $dark;
+}
+.navbar-gradient {
+  background-image: linear-gradient(to bottom, $dark, transparent);
+  background-color: transparent !important;
+}
+
 .content-h-full {
   height: calc(100vh - (4rem));
 }
@@ -115,6 +123,16 @@ body {
       }
       .client-logo {
         padding: 4rem;
+      }
+    }
+  }
+
+  #more-clients {
+    img {
+      filter: grayscale(100%);
+      transition: filter 200ms linear;
+      &:hover {
+        filter: none;
       }
     }
   }

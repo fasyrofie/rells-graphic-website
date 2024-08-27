@@ -10,6 +10,7 @@ import { googleDriveColored } from '@/assets/icons'
 import { BASE_PATH } from '@/utils/prefix'
 
 import laptopFull from '@/assets/images/laptop-full.png'
+import SectionHeading from '@/components/SectionHeading'
 
 const thumbnailDesigns = [
   {
@@ -46,7 +47,7 @@ const thumbnailDesigns = [
 
 const ThumbnailDesign = () => {
   return (
-    <div id="thumbnail-design">
+    <div id="thumbnail-design" className="overflow-x-hidden">
       {/* Intro */}
       <div className="content-h-full py-5">
         <CContainer lg className="position-relative d-flex h-100">
@@ -68,7 +69,7 @@ const ThumbnailDesign = () => {
 
           <CRow className="my-md-auto">
             <CCol xs={12} md={6}>
-              <h1 className="mb-4">Thumbnail Design</h1>
+              <SectionHeading>Thumbnail Design</SectionHeading>
               <p className="mb-4">
                 Client outreach is conducted through X (formerly Twitter), where initial samples are
                 crafted for mid-sized creators and shared via comments on their posts. I have

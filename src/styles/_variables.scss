@@ -7,115 +7,123 @@ $enable-deprecation-messages: false !default;
 // Color system
 
 // scss-docs-start gray-color-variables
-$white:     #fff !default;
+$white: #fff !default;
 $gray-base: #323a49 !default;
-$gray-100:  #f3f4f7 !default;
-$gray-200:  #e7eaee !default;
-$gray-300:  #dbdfe6 !default;
-$gray-400:  #cfd4de !default;
-$gray-500:  #aab3c5 !default;
-$gray-600:  #6d7d9c !default;
-$gray-700:  #4a566d !default;
-$gray-800:  #323a49 !default;
-$gray-900:  #212631 !default;
-$black:     #080a0c !default;
+$gray-100: #f3f4f7 !default;
+$gray-200: #e7eaee !default;
+$gray-300: #dbdfe6 !default;
+$gray-400: #cfd4de !default;
+$gray-500: #aab3c5 !default;
+$gray-600: #6d7d9c !default;
+$gray-700: #4a566d !default;
+$gray-800: #323a49 !default;
+$gray-900: #212631 !default;
+$black: #080a0c !default;
 // scss-docs-end gray-color-variables
 
 // scss-docs-start theme-color-variables
-$primary:       #5856d6 !default;
-$secondary:     #474747 !default;
-$success:       #25D366 !default;
-$info:          #39f !default;
-$warning:       #f9b115 !default;
-$danger:        #e55353 !default;
-$light:         #f3f4f7 !default;
-$dark:          #131313 !default;
+$primary: #5856d6 !default;
+$secondary: #474747 !default;
+$success: #25d366 !default;
+$info: #39f !default;
+$warning: #f9b115 !default;
+$danger: #e55353 !default;
+$light: #f3f4f7 !default;
+$dark: #131313 !default;
 // scss-docs-end theme-color-variables
 
-$primary-text-emphasis:   shade-color($primary, 60%) !default;
-$success-text-emphasis:   shade-color($success, 60%) !default;
-$info-text-emphasis:      shade-color($info, 60%) !default;
-$warning-text-emphasis:   shade-color($warning, 60%) !default;
-$danger-text-emphasis:    shade-color($danger, 60%) !default;
+$primary-text-emphasis: shade-color($primary, 60%) !default;
+$success-text-emphasis: shade-color($success, 60%) !default;
+$info-text-emphasis: shade-color($info, 60%) !default;
+$warning-text-emphasis: shade-color($warning, 60%) !default;
+$danger-text-emphasis: shade-color($danger, 60%) !default;
 
-$primary-bg-subtle:       tint-color($primary, 80%) !default;
-$success-bg-subtle:       tint-color($success, 80%) !default;
-$info-bg-subtle:          tint-color($info, 80%) !default;
-$warning-bg-subtle:       tint-color($warning, 80%) !default;
-$danger-bg-subtle:        tint-color($danger, 80%) !default;
+$primary-bg-subtle: tint-color($primary, 80%) !default;
+$success-bg-subtle: tint-color($success, 80%) !default;
+$info-bg-subtle: tint-color($info, 80%) !default;
+$warning-bg-subtle: tint-color($warning, 80%) !default;
+$danger-bg-subtle: tint-color($danger, 80%) !default;
 
-$primary-border-subtle:   tint-color($primary, 60%) !default;
-$success-border-subtle:   tint-color($success, 60%) !default;
-$info-border-subtle:      tint-color($info, 60%) !default;
-$warning-border-subtle:   tint-color($warning, 60%) !default;
-$danger-border-subtle:    tint-color($danger, 60%) !default;
+$primary-border-subtle: tint-color($primary, 60%) !default;
+$success-border-subtle: tint-color($success, 60%) !default;
+$info-border-subtle: tint-color($info, 60%) !default;
+$warning-border-subtle: tint-color($warning, 60%) !default;
+$danger-border-subtle: tint-color($danger, 60%) !default;
 
 $primary-gradient: (
-  "start":  tint-color($primary, 30%),
-  "stop":   shade-color($primary, 10%)
+  "start": tint-color($primary, 30%),
+  "stop": shade-color($primary, 10%)
 ) !default;
 
 $danger-gradient: (
-  "start":  tint-color($danger, 30%),
-  "stop":   shade-color($danger, 10%)
+  "start": tint-color($danger, 30%),
+  "stop": shade-color($danger, 10%)
 ) !default;
 
 $warning-gradient: (
-  "start":  tint-color($warning, 30%),
-  "stop":   shade-color($warning, 10%)
+  "start": tint-color($warning, 30%),
+  "stop": shade-color($warning, 10%)
 ) !default;
 
 $success-gradient: (
-  "start":  tint-color($success, 30%),
-  "stop":   shade-color($success, 10%)
+  "start": tint-color($success, 30%),
+  "stop": shade-color($success, 10%)
 ) !default;
 
 $info-gradient: (
-  "start":  tint-color($info, 30%),
-  "stop":   shade-color($info, 10%)
+  "start": tint-color($info, 30%),
+  "stop": shade-color($info, 10%)
 ) !default;
 
-$font-size-base:            .9375rem !default;
-$border-color-translucent:  rgba(#080a0c, .0875) !default;
-$footer-bg:                 var(--cui-body-bg) !default;
-$table-cell-padding-y:      .75rem !default;
-$table-cell-padding-x:      .75rem !default;
+$font-size-base: 1rem;
+$border-color-translucent: rgba(#080a0c, 0.0875) !default;
+$footer-bg: var(--cui-body-bg) !default;
+$table-cell-padding-y: 0.75rem !default;
+$table-cell-padding-x: 0.75rem !default;
 
-$sidebar-width:  18rem !default;
+$sidebar-width: 18rem !default;
 $sidebar-widths: (
   sm: 14rem,
   lg: 24rem,
   xl: 26rem
 ) !default;
 
-$sidebar-padding-x:            1.5rem !default;
-$sidebar-brand-color:          var(--cui-body-color-dark) !default;
-$sidebar-toggler-color:        var(--cui-tertiary-color-dark) !default;
-$sidebar-toggler-hover-color:  var(--cui-secondary-color-dark) !default;
-$sidebar-toggler-focus-color:  var(--cui-secondary-color-dark) !default;
+$sidebar-padding-x: 1.5rem !default;
+$sidebar-brand-color: var(--cui-body-color-dark) !default;
+$sidebar-toggler-color: var(--cui-tertiary-color-dark) !default;
+$sidebar-toggler-hover-color: var(--cui-secondary-color-dark) !default;
+$sidebar-toggler-focus-color: var(--cui-secondary-color-dark) !default;
 
-$sidebar-nav-padding-y:        1rem !default;
-$sidebar-nav-padding-x:        1rem !default;
+$sidebar-nav-padding-y: 1rem !default;
+$sidebar-nav-padding-x: 1rem !default;
 
-$header-color:                var(--cui-secondary-color-dark) !default;
-$header-hover-color:          var(--cui-body-color-dark) !default;
-$header-active-color:         var(--cui-body-color-dark) !default;
-$header-toggler-color:        var(--cui-secondary-color-dark) !default;
-$header-toggler-hover-color:  var(--cui-body-color-dark) !default;
+$header-color: var(--cui-secondary-color-dark) !default;
+$header-hover-color: var(--cui-body-color-dark) !default;
+$header-active-color: var(--cui-body-color-dark) !default;
+$header-toggler-color: var(--cui-secondary-color-dark) !default;
+$header-toggler-hover-color: var(--cui-body-color-dark) !default;
 
 $aspect-ratios: (
   "1x1": 100%,
   "4x3": calc(3 / 4 * 100%),
   "16x9": calc(9 / 16 * 100%),
   "21x9": calc(9 / 21 * 100%),
-  "9x16": calc(16 / 9 * 100%),
+  "9x16": calc(16 / 9 * 100%)
 );
 
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
 // $grid-columns:                12 !default;
-$grid-gutter-width:           2rem;
+$grid-gutter-width: 2rem;
 // $grid-row-columns:            6 !default;
 
-$progress-height:                   0.5rem;
+// Container padding
+
+// $container-padding-x: $grid-gutter-width !default;
+
+$progress-height: .375rem;
 // $progress-font-size:                $font-size-base * .75 !default;
 // $progress-bg:                       var(--cui-secondary-bg) !default;
 // $progress-border-radius:            var(--cui-border-radius) !default;
@@ -129,20 +137,19 @@ $progress-height:                   0.5rem;
 // $progress-group-margin-bottom:         $spacer !default;
 // $progress-group-header-margin-bottom:  $spacer * .25 !default;
 
-
 // Carousel
 
 // scss-docs-start carousel-variables
-$carousel-control-color:             $white;
+$carousel-control-color: $white;
 // $carousel-control-width:             15% !default;
 // $carousel-control-opacity:           .5 !default;
 // $carousel-control-hover-opacity:     .9 !default;
 // $carousel-control-transition:        opacity .15s ease !default;
 
-$carousel-indicator-width:           .75rem;
-$carousel-indicator-height:          .75rem;
+$carousel-indicator-width: 0.75rem;
+$carousel-indicator-height: 0.75rem;
 $carousel-indicator-hit-area-height: 0;
-$carousel-indicator-spacer:          calc($carousel-indicator-width / 2);
+$carousel-indicator-spacer: calc($carousel-indicator-width / 2);
 // $carousel-indicator-opacity:         .5 !default;
 // $carousel-indicator-active-bg:       $white !default;
 // $carousel-indicator-active-opacity:  1 !default;
@@ -155,8 +162,8 @@ $carousel-indicator-spacer:          calc($carousel-indicator-width / 2);
 
 // $carousel-control-icon-width:        2rem !default;
 
-$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg width='28' height='49' viewBox='0 0 27 49' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M25.5 2L3 24.5L25.5 47' stroke='#{$carousel-control-color}' stroke-width='4'/></svg>");
-$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg width='28' height='49' viewBox='0 0 28 49' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 47L24.5 24.5L2 2' stroke='#{$carousel-control-color}' stroke-width='4'/></svg>");
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg width='28' height='49' viewBox='0 0 27 49' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M25.5 2L3 24.5L25.5 47' stroke='#{$carousel-control-color}' stroke-width='4'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg width='28' height='49' viewBox='0 0 28 49' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M2 47L24.5 24.5L2 2' stroke='#{$carousel-control-color}' stroke-width='4'/></svg>");
 // $carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
 
 // $carousel-transition-duration:       .6s !default;

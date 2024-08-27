@@ -1,10 +1,9 @@
+'use client'
+
 import { useEffect, useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import Link from 'next/link'
 import classNames from 'classnames'
-
-// 1. Contact Me on md size
-// 2. Hambuger menu ambil dari Figma
 
 import {
   CContainer,
@@ -15,11 +14,7 @@ import {
   CButton,
 } from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
-import {
-  cilMenu, cibInstagram, cibTiktok,
-  cilEnvelopeClosed,
-  cibWhatsapp
-} from '@coreui/icons'
+import { cibInstagram, cibTiktok, cilEnvelopeClosed, cibWhatsapp } from '@coreui/icons'
 import { hamburger, x } from '@/assets/icons'
 
 import { useTypedSelector } from './../store'
@@ -36,12 +31,12 @@ const AppHeader = (): JSX.Element => {
   useEffect(() => {
     document.addEventListener('scroll', () => {
       headerRef.current &&
-        headerRef.current.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0)
+        headerRef.current.classList.toggle('navbar-gradient', document.documentElement.scrollTop > 0)
     })
   }, [])
 
   return (
-    <CHeader position="sticky" className="bg-dark p-0" ref={headerRef}>
+    <CHeader position="sticky" className="navbar-dark p-0" ref={headerRef}>
       <CContainer className="px-4" fluid>
         <CHeaderToggler
           className={classNames('d-lg-none')}
@@ -55,14 +50,24 @@ const AppHeader = (): JSX.Element => {
           <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
         </CSidebarBrand>
         <CForm className="ms-4 me-auto d-none d-lg-flex">
-          <CButton color="nav" shape="rounded-pill">About Me</CButton>
-          <CButton color="nav" shape="rounded-pill">Video Editing</CButton>
-          <CButton color="nav" shape="rounded-pill">Thumbnail Design</CButton>
-          <Link href="/#socmed-design">
+          <Link className="text-reset" href="/#about-me">
+            <CButton color="nav" shape="rounded-pill">About Me</CButton>
+          </Link>
+          <Link className="text-reset" href="/#video-editing">
+            <CButton color="nav" shape="rounded-pill">Video Editing</CButton>
+          </Link>
+          <Link className="text-reset" href="/#thumbnail-design">
+            <CButton color="nav" shape="rounded-pill">Thumbnail Design</CButton>
+          </Link>
+          <Link className="text-reset" href="/#socmed-design">
             <CButton color="nav" shape="rounded-pill">Socmed Design</CButton>
           </Link>
-          <CButton color="nav" shape="rounded-pill">Yearbook Design</CButton>
-          <CButton color="nav" shape="rounded-pill">Illustration</CButton>
+          <Link className="text-reset" href="/#yearbook-design">
+            <CButton color="nav" shape="rounded-pill">Yearbook Design</CButton>
+          </Link>
+          <Link className="text-reset" href="/#illustration">
+            <CButton color="nav" shape="rounded-pill">Illustration</CButton>
+          </Link>
         </CForm>
         <div className='d-none d-xl-flex align-items-center'>
           {/* Instagram */}
