@@ -23,32 +23,32 @@ const _nav = [
   {
     component: CNavItem,
     name: 'About Me',
-    href: '/theme/colors',
+    href: '/#about-me',
   },
   {
     component: CNavItem,
     name: 'Video Editing',
-    href: '/theme/colors',
+    href: '/#video-editing',
   },
   {
     component: CNavItem,
     name: 'Thumbnail Design',
-    href: '/theme/colors',
+    href: '/#thumbnail-design',
   },
   {
     component: CNavItem,
     name: 'Socmed Design',
-    href: '/theme/colors',
+    href: '/#socmed-design',
   },
   {
     component: CNavItem,
     name: 'Yearbook Design',
-    href: '/theme/colors',
+    href: '/#yearbook-design',
   },
   {
     component: CNavItem,
     name: 'Illustration',
-    href: '/theme/colors',
+    href: '/#illustration',
   },
   {
     component: CNavTitle,
