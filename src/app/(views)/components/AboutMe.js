@@ -30,17 +30,25 @@ const AboutMe = () => {
               <br />
               ASYROFIE
             </div>
-            <div className="d-flex flex-wrap mb-3 justify-content-center justify-content-md-start">
-              <CBadge color="secondary" className="bg-gradient rounded-pill p-3 fw-normal me-2">
-                Art Director
-              </CBadge>
-              <CBadge color="secondary" className="bg-gradient rounded-pill p-3 fw-normal me-2">
-                Graphic Designer
-              </CBadge>
-              <CBadge color="secondary" className="bg-gradient rounded-pill p-3 fw-normal">
-                Video Editor
-              </CBadge>
-            </div>
+
+            <CRow className="g-2 mb-3 justify-content-center justify-content-md-start">
+              <CCol xs="auto">
+                <CBadge color="secondary" className="w-100 bg-gradient rounded-pill p-3 fw-normal">
+                  Art Director
+                </CBadge>
+              </CCol>
+              <CCol xs="auto">
+                <CBadge color="secondary" className="w-100 bg-gradient rounded-pill p-3 fw-normal">
+                  Graphic Designer
+                </CBadge>
+              </CCol>
+              <CCol xs="auto">
+                <CBadge color="secondary" className="w-100 bg-gradient rounded-pill p-3 fw-normal">
+                  Video Editor
+                </CBadge>
+              </CCol>
+            </CRow>
+
             <p className="d-none d-md-block pt-4 pb-5 mb-3">
               Graduating in 2022, I initially worked as a Yearbook Designer. For the next few
               months, I worked as a Social Media Graphic Designer. 2 years have passed, and Now I

@@ -80,7 +80,7 @@ const SocmedDesign = () => {
       </div>
 
       {/* Intro */}
-      <div className="text-center py-5">
+      <div className="text-center py-5 px-3">
         <SectionHeading>Social Media Design</SectionHeading>
         <p className="mx-auto mb-0" style={{ maxWidth: '509px' }}>
           Throughout 2022 - 2024, I&apos;ve handled 21 brand&apos;s social media post design with a
@@ -120,7 +120,7 @@ const SocmedDesign = () => {
       <CContainer lg className="text-center py-5">
         <h1 className="display-5 fw-bold mb-4">And Many More</h1>
         <div id="more-clients" className="w-100 overflow-x-hidden">
-          <CRow className="row-cols-3 row-cols-md-6 g-4 justify-content-center align-items-center">
+          <CRow className="row-cols-2 row-cols-md-6 g-4 justify-content-center align-items-center">
             {socmedDesignsMore.map((design, index) => (
               <CCol key={index}>
                 <Image
