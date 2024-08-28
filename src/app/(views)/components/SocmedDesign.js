@@ -120,7 +120,7 @@ const SocmedDesign = () => {
       <CContainer lg className="text-center py-5">
         <h1 className="display-5 fw-bold mb-4">And Many More</h1>
         <div id="more-clients" className="w-100 overflow-x-hidden">
-          <CRow className="row-cols-3 row-cols-md-6 g-4 align-items-center">
+          <CRow className="row-cols-3 row-cols-md-6 g-4 justify-content-center align-items-center">
             {socmedDesignsMore.map((design, index) => (
               <CCol key={index}>
                 <Image
