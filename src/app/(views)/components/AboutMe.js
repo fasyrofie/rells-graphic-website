@@ -33,17 +33,29 @@ const AboutMe = () => {
 
             <CRow className="g-2 mb-3 justify-content-center justify-content-md-start">
               <CCol xs="auto">
-                <CBadge color="secondary" className="w-100 bg-gradient rounded-pill p-3 fw-normal">
+                <CBadge
+                  className="w-100 bg-gradient rounded-pill p-3 fw-normal"
+                  color="secondary"
+                  size="sm"
+                >
                   Art Director
                 </CBadge>
               </CCol>
               <CCol xs="auto">
-                <CBadge color="secondary" className="w-100 bg-gradient rounded-pill p-3 fw-normal">
+                <CBadge
+                  className="w-100 bg-gradient rounded-pill p-3 fw-normal"
+                  color="secondary"
+                  size="sm"
+                >
                   Graphic Designer
                 </CBadge>
               </CCol>
               <CCol xs="auto">
-                <CBadge color="secondary" className="w-100 bg-gradient rounded-pill p-3 fw-normal">
+                <CBadge
+                  className="w-100 bg-gradient rounded-pill p-3 fw-normal"
+                  color="secondary"
+                  size="sm"
+                >
                   Video Editor
                 </CBadge>
               </CCol>
@@ -54,7 +66,8 @@ const AboutMe = () => {
               months, I worked as a Social Media Graphic Designer. 2 years have passed, and Now I
               have opened a video editor gig.
             </p>
-            <div className="row gx-4 gy-2" style={{ maxWidth: '424px' }}>
+
+            <div className="d-none d-md-flex row gx-4 gy-2" style={{ maxWidth: '424px' }}>
               <div className="col-6 d-flex align-items-center">
                 <CIcon icon={adobePhotoshop} height={64} className="me-3" />
                 <div className="w-100">
@@ -90,7 +103,7 @@ const AboutMe = () => {
               src={profilePhotoSm}
               className="img-fluid w-100 d-block d-md-none"
             />
-            <p className="d-block d-md-none text-center px-4 py-4">
+            <p className="d-block d-md-none text-center px-4 py-4 my-2">
               Graduating in 2022, I initially worked as a Yearbook Designer. For the next few
               months, I worked as a Social Media Graphic Designer. 2 years have passed, and Now I
               have opened a video editor gig.
