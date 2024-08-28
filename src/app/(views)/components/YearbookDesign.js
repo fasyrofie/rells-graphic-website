@@ -43,10 +43,10 @@ const YearbookDesign = () => {
       <div className="bg-dark">
         <CContainer lg className="py-5">
           <CRow className="g-5">
-            <CCol xs={12} md={6} className="d-flex align-items-center">
+            <CCol xs={12} md={6} className="d-flex align-items-center justify-content-center">
               <div>
                 <SectionHeading>Yearbook Design</SectionHeading>
-                <p>
+                <p className="mb-0 d-none d-md-block">
                   I have been employed with Selected Comm+ since 2022. In 2023, I transitioned to
                   another agency, Noni Kolektiv, where I initially worked as a freelancer before
                   advancing to the position of Design Lead.
@@ -63,14 +63,21 @@ const YearbookDesign = () => {
                   height={650}
                 />
               </FadeIn>
+              <p className="text-center d-block d-md-none mt-5 mb-0">
+                <small>
+                  I have been employed with Selected Comm+ since 2022. In 2023, I transitioned to
+                  another agency, Noni Kolektiv, where I initially worked as a freelancer before
+                  advancing to the position of Design Lead.
+                </small>
+              </p>
             </CCol>
           </CRow>
         </CContainer>
       </div>
 
       {/* Showcase */}
-      <CContainer lg className="py-5 px-5 px-md-3">
-        <div className="py-5">
+      <CContainer lg className="py-0 my-md-5 px-5 px-md-3">
+        <div className="py-0 py-md-5">
           <CRow className="g-5 py-5">
             {/* Group Photo */}
             <CCol xs={12} md={7}>
@@ -164,7 +171,7 @@ const YearbookDesign = () => {
         </div>
 
         {/* Yearbook */}
-        <div className="py-5">
+        <div className="py-0 py-md-5">
           <CRow className="g-4 g-md-5 py-5 align-items-center">
             {yearbookDesigns.map((design, index) => (
               <CCol key={index} xs={6} md={4}>
@@ -177,11 +184,12 @@ const YearbookDesign = () => {
                     height={300}
                   />
                 </div>
-                <h4 className="fw-bold">{design.name}</h4>
+                <h4 className="d-none d-md-block fw-bold">{design.name}</h4>
+                <h6 className="d-block d-md-none fw-bold">{design.name}</h6>
                 <p className="text-light">{design.year}</p>
               </CCol>
             ))}
-            <CCol className="text-center">
+            <CCol xs={12} md={4} className="text-center">
               <Link
                 className="btn btn-white-gradient rounded-4 p-3"
                 href={'https://drive.google.com/drive/folders/1QKkqJhfl34nXFbuIzRn7VKQ0qQn46ON5'}

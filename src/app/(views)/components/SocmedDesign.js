@@ -117,7 +117,7 @@ const SocmedDesign = () => {
       </CContainer>
 
       {/* More Works */}
-      <CContainer lg className="text-center py-5">
+      <CContainer lg className="text-center py-5 px-5 px-md-3">
         <h1 className="display-5 fw-bold mb-4">And Many More</h1>
         <div id="more-clients" className="w-100 overflow-x-hidden">
           <CRow className="row-cols-2 row-cols-md-6 g-4 justify-content-center align-items-center">
