@@ -114,8 +114,8 @@ const Illustration = () => {
         </CRow>
 
         <div className="py-5">
-          <div className="py-5">
-            <div className="py-5"></div>
+          <div className="p-0 py-md-5">
+            <div className="p-0 py-lg-5"></div>
           </div>
         </div>
       </div>

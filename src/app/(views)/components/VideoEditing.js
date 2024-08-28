@@ -69,27 +69,29 @@ const VideoEditing = () => {
       {/* Intro */}
       <div className="position-relative bg-dark py-5">
         <CContainer lg>
-          <div className="mx-auto w-100 text-center py-4" style={{ maxWidth: '816px' }}>
-            <div className="py-4">
-              <Image
-                alt="DandZSpeaks Avatar"
-                src={DandZSpeaksAvatar}
-                className="img-fluid rounded-circle"
-                width={80}
-                height={80}
-              />
-              <FadeIn>
+          <FadeIn>
+            <div className="mx-auto w-100 text-center py-4" style={{ maxWidth: '816px' }}>
+              <div className="py-4">
+                <Image
+                  alt="DandZSpeaks Avatar"
+                  src={DandZSpeaksAvatar}
+                  className="img-fluid rounded-circle"
+                  width={80}
+                  height={80}
+                />
+
                 <div className="display-3 fw-bold mt-3 text-center fade-in">
                   I help DandZSpeaks Level Up Their Content.
                 </div>
-              </FadeIn>
-              <p className="text-white mt-4 mx-auto text-center" style={{ maxWidth: '537px' }}>
-                For a beginner creator, they generate decent views with their short content. This is
-                why <b>I can help you as a small creator to get decent amount of views</b> with
-                great editing!
-              </p>
+
+                <p className="mt-4 mb-0 mx-auto text-center" style={{ maxWidth: '537px' }}>
+                  For a beginner creator, they generate decent views with their short content. This
+                  is why <b>I can help you as a small creator to get decent amount of views</b> with
+                  great editing!
+                </p>
+              </div>
             </div>
-          </div>
+          </FadeIn>
         </CContainer>
 
         <div className="position-absolute top-50 start-0 translate-middle-y user-select-none">
@@ -134,34 +136,36 @@ const VideoEditing = () => {
 
       {/* Review */}
       <CContainer lg className="py-5">
-        <div className="testimony rounded-5 p-0 p-md-4 p-lg-5">
-          <div className="p-0 p-lg-2 p-xl-5">
-            <CRow className="g-3 g-lg-4 g-xl-5 align-items-center px-5 py-3">
-              <CCol xs={12} md="auto" className="text-center">
-                <Image
-                  alt="DandZSpeaks Avatar"
-                  src={DandZSpeaksAvatar}
-                  className="img-fluid rounded-circle"
-                  width={114}
-                  height={114}
-                />
-              </CCol>
-              <CCol xs={12} md="auto" className="d-flex flex-column align-items-center">
-                <h2 className="text-white">DandZSpeaks</h2>
-                <CRating readOnly size="lg" value={5} />
-              </CCol>
-              <CCol xs={12} md className="text-center text-md-start">
-                <p className="text-white">
-                  “You did a really great job! You really are{' '}
-                  <b>consistent with the quality of the video</b>. Hell, even you are getting better
-                  each video! The greatest quality of yours is <b>your speed</b>. I am surprised
-                  that <b>you can produce these videos in such short of time!</b>”
-                </p>
-              </CCol>
-              <CCol xs={12} md="auto" className="text-center">
-                <CIcon icon={discord} height={28} />
-              </CCol>
-            </CRow>
+        <div className="testimony rounded-5 px-xl-5 py-xl-3">
+          <div className="p-2 p-md-4 p-lg-5">
+            <div className="px-4 py-2">
+              <CRow className="gx-lg-5 align-items-center">
+                <CCol xs={12} lg="auto" className="py-3 text-center">
+                  <Image
+                    alt="DandZSpeaks Avatar"
+                    src={DandZSpeaksAvatar}
+                    className="img-fluid rounded-circle"
+                    width={114}
+                    height={114}
+                  />
+                </CCol>
+                <CCol xs={12} lg="auto" className="py-3 d-flex flex-column align-items-center">
+                  <h1 className="fw-bold">DandZSpeaks</h1>
+                  <CRating readOnly size="lg" value={5} />
+                </CCol>
+                <CCol xs={12} lg className="py-3 text-center text-lg-start">
+                  <p>
+                    “You did a really great job! You really are{' '}
+                    <b>consistent with the quality of the video</b>. Hell, even you are getting
+                    better each video! The greatest quality of yours is <b>your speed</b>. I am
+                    surprised that <b>you can produce these videos in such short of time!</b>”
+                  </p>
+                </CCol>
+                <CCol xs={12} lg="auto" className="py-3 text-center">
+                  <CIcon icon={discord} height={28} />
+                </CCol>
+              </CRow>
+            </div>
           </div>
         </div>
       </CContainer>
