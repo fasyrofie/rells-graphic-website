@@ -51,22 +51,22 @@ const AppHeader = (): JSX.Element => {
           <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
         </CSidebarBrand>
         <CForm className="ms-4 me-auto d-none d-lg-flex">
-          <Link className="text-reset" href={`${BASE_PATH}/#about-me`}>
+          <Link className="text-reset" href={`${BASE_PATH}#about-me`}>
             <CButton color="nav" shape="rounded-pill">About Me</CButton>
           </Link>
-          <Link className="text-reset" href={`${BASE_PATH}/#video-editing`}>
+          <Link className="text-reset" href={`${BASE_PATH}#video-editing`}>
             <CButton color="nav" shape="rounded-pill">Video Editing</CButton>
           </Link>
-          <Link className="text-reset" href={`${BASE_PATH}/#thumbnail-design`}>
+          <Link className="text-reset" href={`${BASE_PATH}#thumbnail-design`}>
             <CButton color="nav" shape="rounded-pill">Thumbnail Design</CButton>
           </Link>
-          <Link className="text-reset" href={`${BASE_PATH}/#socmed-design`}>
+          <Link className="text-reset" href={`${BASE_PATH}#socmed-design`}>
             <CButton color="nav" shape="rounded-pill">Socmed Design</CButton>
           </Link>
-          <Link className="text-reset" href={`${BASE_PATH}/#yearbook-design`}>
+          <Link className="text-reset" href={`${BASE_PATH}#yearbook-design`}>
             <CButton color="nav" shape="rounded-pill">Yearbook Design</CButton>
           </Link>
-          <Link className="text-reset" href={`${BASE_PATH}/#illustration`}>
+          <Link className="text-reset" href={`${BASE_PATH}#illustration`}>
             <CButton color="nav" shape="rounded-pill">Illustration</CButton>
           </Link>
         </CForm>
