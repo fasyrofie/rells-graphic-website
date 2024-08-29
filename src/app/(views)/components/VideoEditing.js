@@ -68,7 +68,7 @@ const VideoEditing = () => {
       {/* DandZSpeaks */}
       {/* Intro */}
       <div className="position-relative bg-dark py-5">
-        <CContainer lg>
+        <CContainer lg className="position-relative z-2">
           <FadeIn>
             <div className="mx-auto w-100 text-center py-4" style={{ maxWidth: '816px' }}>
               <div className="py-4">
@@ -94,11 +94,15 @@ const VideoEditing = () => {
           </FadeIn>
         </CContainer>
 
-        <div className="position-absolute top-50 start-0 translate-middle-y user-select-none">
+        <div className="d-block d-md-none h-100 w-100 position-absolute top-50 start-50 translate-middle z-1">
+          <div className="w-100 h-100 header-gradient"></div>
+        </div>
+
+        <div className="position-absolute top-50 start-0 translate-middle-y user-select-none z-0">
           <Image alt="Capcut" src={capcutLogo} />
         </div>
 
-        <div className="position-absolute top-50 end-0 translate-middle-y user-select-none">
+        <div className="position-absolute top-50 end-0 translate-middle-y user-select-none z-0">
           <Image alt="After Effects" src={afterEffectsLogo} />
         </div>
       </div>

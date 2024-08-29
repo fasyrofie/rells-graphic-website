@@ -4,6 +4,7 @@ import { CButton, CNavItem, CNavTitle } from '@coreui/react-pro'
 import CIcon from '@coreui/icons-react'
 import { cibInstagram, cibTiktok, cibWhatsapp, cilEnvelopeClosed } from '@coreui/icons'
 import { x } from './assets/icons'
+import { BASE_PATH } from '@/utils/prefix'
 
 export type Badge = {
   color: string
@@ -23,32 +24,32 @@ const _nav = [
   {
     component: CNavItem,
     name: 'About Me',
-    href: '/#about-me',
+    href: `${BASE_PATH}/#about-me`,
   },
   {
     component: CNavItem,
     name: 'Video Editing',
-    href: '/#video-editing',
+    href: `${BASE_PATH}/video-editing`,
   },
   {
     component: CNavItem,
     name: 'Thumbnail Design',
-    href: '/#thumbnail-design',
+    href: `${BASE_PATH}/thumbnail-design`,
   },
   {
     component: CNavItem,
     name: 'Socmed Design',
-    href: '/#socmed-design',
+    href: `${BASE_PATH}/socmed-design`,
   },
   {
     component: CNavItem,
     name: 'Yearbook Design',
-    href: '/#yearbook-design',
+    href: `${BASE_PATH}/yearbook-design`,
   },
   {
     component: CNavItem,
     name: 'Illustration',
-    href: '/#illustration',
+    href: `${BASE_PATH}/illustration`,
   },
   {
     component: CNavTitle,

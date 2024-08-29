@@ -40,7 +40,7 @@ const YearbookDesign = () => {
   return (
     <div id="yearbook-design" className="overflow-x-hidden py-5">
       {/* Intro */}
-      <div className="bg-dark">
+      <div className="bg-dark-gradient">
         <CContainer lg className="py-5">
           <CRow className="g-5">
             <CCol xs={12} md={6} className="d-flex align-items-center justify-content-center">
@@ -172,7 +172,7 @@ const YearbookDesign = () => {
 
         {/* Yearbook */}
         <div className="py-0 py-md-5">
-          <CRow className="g-4 g-md-5 py-5 align-items-center">
+          <CRow className="g-4 g-md-5 py-5 align-items-center justify-content-center">
             {yearbookDesigns.map((design, index) => (
               <CCol key={index} xs={6} md={4}>
                 <div className="ratio ratio-1x1 mb-3">

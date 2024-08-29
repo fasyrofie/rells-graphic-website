@@ -97,12 +97,20 @@ const AboutMe = () => {
 
           {/* Rigth */}
           <CCol xs={12} md={6} className="p-0 p-md-3">
-            <Image alt="Profile Photo" src={profilePhoto} className="img-fluid d-none d-md-block" />
-            <Image
-              alt="Profile Photo"
-              src={profilePhotoSm}
-              className="img-fluid w-100 d-block d-md-none"
-            />
+            <div className="position-relative">
+              <Image
+                alt="Profile Photo"
+                src={profilePhoto}
+                className="img-fluid d-none d-md-block"
+              />
+              <Image
+                alt="Profile Photo"
+                src={profilePhotoSm}
+                className="img-fluid w-100 d-block d-md-none"
+              />
+              <div className="d-block d-md-none profile-photo-gradient position-absolute bottom-0 start-50 translate-middle-x"></div>
+            </div>
+
             <p className="d-block d-md-none text-center px-4 py-4 my-2">
               Graduating in 2022, I initially worked as a Yearbook Designer. For the next few
               months, I worked as a Social Media Graphic Designer. 2 years have passed, and Now I

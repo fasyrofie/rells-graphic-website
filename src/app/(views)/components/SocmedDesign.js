@@ -61,9 +61,9 @@ const socmedDesignsMore = [
 
 const SocmedDesign = () => {
   return (
-    <div id="socmed-design" className="overflow-x-hidden py-5">
+    <div id="socmed-design" className="overflow-x-hidden pt-5 pb-0 pb-md-5">
       {/* Banner */}
-      <div className="position-relative d-flex py-5">
+      <div className="position-relative d-flex pt-5 pb-0 pb-md-5">
         <Image
           alt="Social Media Banner"
           src={socmedBannerImage}
@@ -80,7 +80,7 @@ const SocmedDesign = () => {
       </div>
 
       {/* Intro */}
-      <div className="text-center py-5 px-3">
+      <div className="text-center pt-4 pb-5 pt-md-5 px-3">
         <SectionHeading>Social Media Design</SectionHeading>
         <p className="mx-auto mb-0" style={{ maxWidth: '509px' }}>
           Throughout 2022 - 2024, I&apos;ve handled 21 brand&apos;s social media post design with a

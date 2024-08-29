@@ -36,7 +36,7 @@ const graphicDesigns = [
 
 const GraphicDesign = () => {
   return (
-    <div id="graphic-design" className="bg-dark overflow-x-hidden py-5">
+    <div id="graphic-design" className="bg-dark-gradient overflow-x-hidden py-5">
       <CContainer lg>
         <p className={classNames(akiraExpanded.className, 'py-4 display-2 lh-1 text-center')}>
           Graphic

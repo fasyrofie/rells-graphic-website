@@ -25,8 +25,8 @@ const thumbnailDesigns = [
   },
   {
     src: '/images/thumbnail-design/NicInspo.png',
-    width: 300,
-    height: 300,
+    width: 400,
+    height: 400,
   },
   {
     src: '/images/thumbnail-design/Roman Mossey.png',
@@ -69,21 +69,25 @@ const ThumbnailDesign = () => {
 
           <CRow className="my-md-auto">
             <CCol xs={12} md={6}>
-              <SectionHeading>Thumbnail Design</SectionHeading>
-              <p className="mb-4">
+              <SectionHeading className="text-center text-md-start">
+                Thumbnail Design
+              </SectionHeading>
+              <p className="mb-4 text-center text-md-start">
                 Client outreach is conducted through X (formerly Twitter), where initial samples are
                 crafted for mid-sized creators and shared via comments on their posts. I have
                 developed over 30 designs using Adobe Photoshop. Here are examples of my most
                 notable work.
               </p>
-              <Link
-                className="btn btn-white-gradient rounded-4 p-3"
-                href={'https://drive.google.com/drive/folders/1-WvcndreMyaIiRfReDvZauRbUQRjlZ0U'}
-                target="_blank"
-              >
-                <CIcon icon={googleDriveColored} className="me-2" />
-                More of My Works
-              </Link>
+              <div className="text-center text-md-start">
+                <Link
+                  className="btn btn-white-gradient rounded-4 p-3"
+                  href={'https://drive.google.com/drive/folders/1-WvcndreMyaIiRfReDvZauRbUQRjlZ0U'}
+                  target="_blank"
+                >
+                  <CIcon icon={googleDriveColored} className="me-2" />
+                  More of My Works
+                </Link>
+              </div>
             </CCol>
             <CCol xs={12} md={6} className="order-md-first"></CCol>
           </CRow>
@@ -92,13 +96,13 @@ const ThumbnailDesign = () => {
 
       {/* Showcases */}
       <CContainer lg className="py-5">
-        <CRow className="row-cols-1">
+        <CRow className="row-cols-1 g-0 g-md-5">
           {thumbnailDesigns.map((design, index) => (
             <CCol
               key={index}
               className={classNames(
                 index % 3 === 0 ? 'text-start' : index % 3 === 1 ? 'text-center' : 'text-end',
-                'p-3',
+                'px-3 py-3 py-md-5',
               )}
             >
               <FadeIn>
